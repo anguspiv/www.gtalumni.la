@@ -99,5 +99,10 @@
   },
   "prisma": {
     "seed": "ts-node --require tsconfig-paths/register prisma/seed.ts"
+  },
+  "lint-staged": {
+    "*.{js,ts,jsx,tsx,css}": [
+      "eslint --cache --fix"
+    ]
   }
 }
