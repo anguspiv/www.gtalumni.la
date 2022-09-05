@@ -104,5 +104,6 @@
     "*.{js,ts,jsx,tsx,css}": [
       "eslint --cache --fix"
     ]
-  }
+  },
+  "version": "1.0.0"
 }
