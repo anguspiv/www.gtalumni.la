@@ -24,5 +24,16 @@ module.exports = {
       plugins: ['jest', 'testing-library', 'jest-dom'],
       extends: ['plugin:testing-library/react', 'plugin:jest-dom/recommended', 'plugin:jest/all'],
     },
+    {
+      files: ['**/*.cy.js?(x)', './cypress/**/*.js?(x)', './cypress.config.js'],
+      plugins: ['cypress'],
+      extends: ['plugin:cypress/recommended'],
+      env: {
+        'cypress/globals': true,
+      },
+      rules: {
+        'import/no-extraneous-dependencies': 'off',
+      },
+    },
   ],
 };

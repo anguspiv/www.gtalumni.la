@@ -1,4 +1,4 @@
-name: Commit
+name: Checks
 on: push
 jobs:
   lint:

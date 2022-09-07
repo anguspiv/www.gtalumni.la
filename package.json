@@ -9,7 +9,8 @@
     "lint": "next lint",
     "prepare": "husky install",
     "release": "semantic-release",
-    "test": "jest"
+    "test": "jest",
+    "cypress:open": "cypress open"
   },
   "dependencies": {
     "@emotion/cache": "^11.10.3",
@@ -28,12 +29,15 @@
     "@emotion/eslint-plugin": "^11.10.0",
     "@semantic-release/changelog": "^6.0.1",
     "@semantic-release/git": "^10.0.1",
+    "@testing-library/cypress": "^8.0.3",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
+    "cypress": "^10.7.0",
     "eslint": "^8.23.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-next": "12.2.5",
     "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-cypress": "^2.12.1",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jest": "^27.0.1",
     "eslint-plugin-jest-dom": "^4.0.2",
