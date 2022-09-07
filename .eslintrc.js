@@ -15,4 +15,14 @@ module.exports = {
     '@emotion/styled-import': 'error',
     '@emotion/no-vanilla': 'error',
   },
+  overrides: [
+    {
+      env: {
+        jest: true,
+      },
+      files: ['**/*.test.js?(x)', './__tests__/**/*.js?(x)'],
+      plugins: ['jest', 'testing-library', 'jest-dom'],
+      extends: ['plugin:testing-library/react', 'plugin:jest-dom/recommended', 'plugin:jest/all'],
+    },
+  ],
 };
