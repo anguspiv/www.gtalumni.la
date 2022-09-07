@@ -36,7 +36,16 @@ export const hoverStyles = css`
     border-color: aqua;
     box-shadow: -15px -15px 0 0 aqua, -30px -30px 0 0 cornflowerblue;
   }
-`
+`;
+
+export const bounce = keyframes`
+  from {
+    transform: scale(1.01);
+  }
+  to {
+    transform: scale(0.99);
+  }
+`;
 
 export const Basic = styled.div`
   ${basicStyles};
