@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import createCache from '@emotion/cache';
 import { CacheProvider } from '@emotion/react';
 import { globalStyles } from '../styles';
@@ -13,4 +14,9 @@ function App({ Component, pageProps }) {
   );
 }
 
-export default App
+App.propTypes = {
+  Component: PropTypes.elementType.isRequired,
+  pageProps: PropTypes.shape({}).isRequired,
+};
+
+export default App;
