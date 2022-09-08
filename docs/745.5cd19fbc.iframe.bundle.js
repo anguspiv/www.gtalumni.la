@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwww_gtalumni_la=self.webpackChunkwww_gtalumni_la||[]).push([[745],{20745(t,a,e){var o=e(73935);a.createRoot=o.createRoot,a.hydrateRoot=o.hydrateRoot}}]);
