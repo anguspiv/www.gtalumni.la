@@ -37,3 +37,6 @@ next-env.d.ts
 .vscode
 
 .jest-test-results.json
+build-storybook.log
+storybook-static/
+docs-build/
