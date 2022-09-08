@@ -35,5 +35,15 @@ module.exports = {
         'import/no-extraneous-dependencies': 'off',
       },
     },
+    {
+      files: ['**/*.stories.js?(x)'],
+      extends: ['plugin:storybook/recommended'],
+      rules: {
+        'import/no-extraneous-dependencies': 'off',
+        'react/function-component-definition': 'off',
+        'react/jsx-props-no-spreading': 'off',
+        'import/prefer-default-export': 'off',
+      },
+    },
   ],
 };
