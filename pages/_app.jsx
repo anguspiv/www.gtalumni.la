@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import createCache from '@emotion/cache';
-import { CacheProvider } from '@emotion/react';
+import { CacheProvider, Global } from '@emotion/react';
 import Script from 'next/script';
 import { globalStyles } from '../styles';
 
@@ -16,15 +16,15 @@ function App({ Component, pageProps }) {
       />
       <Script strategy="lazyOnload" id="gtag-init">
         {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
-              page_path: window.location.pathname,
-            });
-          `}
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
+                page_path: window.location.pathname,
+              });
+            `}
       </Script>
-      {globalStyles}
+      <Global styles={globalStyles} />
       <Component {...pageProps} />
     </CacheProvider>
   );

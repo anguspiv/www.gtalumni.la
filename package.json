@@ -21,6 +21,7 @@
     "next": "12.2.5",
     "polished": "^4.2.2",
     "prop-types": "^15.8.1",
+    "radash": "^7.1.0",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
@@ -29,6 +30,7 @@
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
     "@emotion/babel-plugin": "^11.10.2",
+    "@emotion/babel-preset-css-prop": "^11.10.0",
     "@emotion/eslint-plugin": "^11.10.0",
     "@semantic-release/changelog": "^6.0.1",
     "@semantic-release/git": "^10.0.1",
@@ -40,9 +42,6 @@
     "@storybook/addon-storysource": "^6.5.10",
     "@storybook/builder-webpack5": "^6.5.10",
     "@storybook/manager-webpack5": "^6.5.10",
-    "storybook-addon-next-router": "^4.0.0",
-    "storybook-addon-swc": "^1.1.8",
-    "storybook-dark-mode": "^1.1.0",
     "@storybook/react": "^6.5.10",
     "@testing-library/cypress": "^8.0.3",
     "@testing-library/jest-dom": "^5.16.5",
@@ -69,6 +68,9 @@
     "lint-staged": "^13.0.3",
     "prettier": "2.7.1",
     "semantic-release": "^19.0.5",
+    "storybook-addon-next-router": "^4.0.0",
+    "storybook-addon-swc": "^1.1.8",
+    "storybook-dark-mode": "^1.1.0",
     "storybook-docs-toc": "^1.7.0"
   }
 }

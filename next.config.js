@@ -4,7 +4,7 @@ const nextConfig = {
   swcMinify: true,
   compiler: {
     emotion: true,
-  }
-}
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
