@@ -1,4 +1,6 @@
 import { RouterContext } from 'next/dist/shared/lib/router-context';
+import { Global } from '@emotion/react';
+import { globalStyles } from '../styles/';
 
 export const parameters = {
   nextRouter: {
@@ -12,3 +14,14 @@ export const parameters = {
     },
   },
 };
+
+export const decorators = [
+  (Story) => {
+    return (
+      <>
+        <Global styles={globalStyles} />
+        <Story />
+      </>
+    );
+  },
+];
