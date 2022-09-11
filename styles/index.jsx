@@ -1,19 +1,23 @@
 import { css, keyframes } from '@emotion/react';
 import styled from '@emotion/styled';
+import emotionNormalize from 'emotion-normalize';
+import { rem } from 'polished';
 import { theme } from './theme';
 
 export const globalStyles = css`
+  ${emotionNormalize}
   :root {
     ${theme}
   }
   html,
   body {
-    padding: 3rem 1rem;
+    padding: 0;
     margin: 0;
+    min-height: 100vh;
     background: var(--gt-color-background-primary);
     color: var(--gt-color-text-primary);
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 16px;
+    font-family: var(--gt-font-family-regular);
+    font-size: ${rem(16)};
     line-height: 1.5;
   }
 `;
