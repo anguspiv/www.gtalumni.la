@@ -51,6 +51,10 @@ export const text = css`
   --gt-color-text-link-visited: ${colorValues.purple};
   --gt-color-text-alt-link: ${colorValues.brightBlue};
   --gt-color-text-alt-link-visited: ${colorValues.green};
+  --gt-color-text-title: ${colorValues.mediumGold};
+  --gt-color-text-subtitle: ${colorValues.darkGold};
+  --gt-color-text-alt-title: ${colorValues.navy};
+  --gt-color-text-alt-subtitle: ${colorValues.navy};
 `;
 
 export const status = css`
