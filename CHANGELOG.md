@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.1.0...v1.2.0) (2022-09-11)
+
+
+### Features
+
+* **theme:** adds google fonts ([5e551d6](https://github.com/anguspiv/www.gtalumni.la/commit/5e551d6e7ecaf963a6c01816795bd9ea74f6796b)), closes [#50](https://github.com/anguspiv/www.gtalumni.la/issues/50)
+
 # [1.1.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.0.0...v1.1.0) (2022-09-11)
 
 
