@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.2.0...v1.3.0) (2022-09-12)
+
+
+### Features
+
+* **styles:** adds intial base styles ([4c81ea8](https://github.com/anguspiv/www.gtalumni.la/commit/4c81ea81e2f692935bfd2a9ea78f4ec767e5f03e)), closes [#45](https://github.com/anguspiv/www.gtalumni.la/issues/45)
+
 # [1.2.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.1.0...v1.2.0) (2022-09-11)
 
 
