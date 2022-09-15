@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.3.0...v1.4.0) (2022-09-15)
+
+
+### Features
+
+* adds a typography component ([4fe67fd](https://github.com/anguspiv/www.gtalumni.la/commit/4fe67fd6bc1e5b8aca3afb748ca281d470b83811)), closes [#51](https://github.com/anguspiv/www.gtalumni.la/issues/51)
+
 # [1.3.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.2.0...v1.3.0) (2022-09-12)
 
 
