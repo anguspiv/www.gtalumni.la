@@ -1,3 +1,11 @@
+# [1.5.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.4.0...v1.5.0) (2022-09-17)
+
+
+### Features
+
+* **atoms:** adds nav link component ([8a7939c](https://github.com/anguspiv/www.gtalumni.la/commit/8a7939c806678715b3c932b9b5ebaf121a175dc8)), closes [#46](https://github.com/anguspiv/www.gtalumni.la/issues/46)
+* **theme:** adds base transition vars ([244dfa6](https://github.com/anguspiv/www.gtalumni.la/commit/244dfa62723b13f810b6d33d0bc578defaa556cd))
+
 # [1.4.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.3.0...v1.4.0) (2022-09-15)
 
 
