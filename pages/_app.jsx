@@ -2,7 +2,8 @@ import PropTypes from 'prop-types';
 import createCache from '@emotion/cache';
 import { CacheProvider, Global } from '@emotion/react';
 import Script from 'next/script';
-import { globalStyles } from '../styles';
+import { globalStyles } from '@styles/index';
+import { Page } from '@components/templates/Page';
 
 const cache = createCache({ key: 'css', prepend: true });
 
@@ -25,7 +26,9 @@ function App({ Component, pageProps }) {
             `}
       </Script>
       <Global styles={globalStyles} />
-      <Component {...pageProps} />
+      <Page>
+        <Component {...pageProps} />
+      </Page>
     </CacheProvider>
   );
 }
