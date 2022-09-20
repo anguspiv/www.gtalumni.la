@@ -1,3 +1,13 @@
+# [1.6.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.5.0...v1.6.0) (2022-09-20)
+
+
+### Features
+
+* **atoms:** adds container component ([cbe5e67](https://github.com/anguspiv/www.gtalumni.la/commit/cbe5e675acad0b670b54998b45efd7a37b209581))
+* **organisms:** adds site header components ([c882f2a](https://github.com/anguspiv/www.gtalumni.la/commit/c882f2ada270e0eb61e4f0ffb32afc54a3be631d))
+* **styles:** adds breakpoints utils ([f44fe53](https://github.com/anguspiv/www.gtalumni.la/commit/f44fe5372c0c595a717686e381557cb78445e533))
+* **templates:** adds page component for layout ([686fc0d](https://github.com/anguspiv/www.gtalumni.la/commit/686fc0d243a123c3056355e1365c758c0d88693b))
+
 # [1.5.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.4.0...v1.5.0) (2022-09-17)
 
 
