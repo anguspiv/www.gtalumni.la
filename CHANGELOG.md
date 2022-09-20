@@ -1,3 +1,17 @@
+# [1.7.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.6.0...v1.7.0) (2022-09-20)
+
+
+### Bug Fixes
+
+* **container:** fixes typo in media queries ([08bd941](https://github.com/anguspiv/www.gtalumni.la/commit/08bd941de00362a74b7d43e55949eb87f9ac3923))
+* **global-styles:** adds box sizing reset ([72ce343](https://github.com/anguspiv/www.gtalumni.la/commit/72ce34318f44f3a95e7f32bd876b7b0bd1b40973))
+
+
+### Features
+
+* **atoms:** adds the logo component ([357d10d](https://github.com/anguspiv/www.gtalumni.la/commit/357d10d4a24ae05f6f5bd911d3a4527e5156189b)), closes [#36](https://github.com/anguspiv/www.gtalumni.la/issues/36)
+* **molecules:** adds the site banner ([c7a779f](https://github.com/anguspiv/www.gtalumni.la/commit/c7a779f85f299e5baca242fc9ccfeedabc0ae2c4)), closes [#37](https://github.com/anguspiv/www.gtalumni.la/issues/37)
+
 # [1.6.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.5.0...v1.6.0) (2022-09-20)
 
 
