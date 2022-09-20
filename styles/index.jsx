@@ -9,6 +9,16 @@ export const globalStyles = css`
   :root {
     ${theme}
   }
+
+  html {
+    box-sizing: border-box;
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
   html,
   body {
     padding: 0;
