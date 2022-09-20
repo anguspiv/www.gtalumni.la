@@ -5,6 +5,7 @@ module.exports = {
     'prettier/prettier': 'error',
     'react/react-in-jsx-scope': 'off',
     'react/jsx-props-no-spreading': 'off',
+    'react/no-unknown-property': ['error', { ignore: ['css'] }],
     'import/order': [
       'error',
       {
