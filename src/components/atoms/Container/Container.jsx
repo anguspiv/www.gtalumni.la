@@ -9,19 +9,19 @@ export const Container = styled.div`
   margin-left: auto;
   margin-right: auto;
 
-  ${media.sm}: {
+  ${media.sm} {
     max-wdith: ${rem(540)};
   }
 
-  ${media.md}: {
+  ${media.md} {
     max-width: ${rem(720)};
   }
 
-  ${media.lg}: {
+  ${media.lg} {
     max-width: ${rem(960)};
   }
 
-  ${media.xl}: {
+  ${media.xl} {
     max-width: ${rem(1140)};
   }
 `;
