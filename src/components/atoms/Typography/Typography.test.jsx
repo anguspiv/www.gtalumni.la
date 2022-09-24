@@ -88,4 +88,12 @@ describe('<Typography />', () => {
     expect(screen.getByText('Sample Text')).toBeInTheDocument();
     expect(screen.getByRole('button')).toBeInTheDocument();
   });
+
+  it('should render with additional classNames', () => {
+    expect.assertions(1);
+
+    render(<Typography className="foo">Sample Text</Typography>);
+
+    expect(screen.getByText('Sample Text')).toHaveClass('foo');
+  });
 });

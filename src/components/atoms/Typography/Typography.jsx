@@ -124,15 +124,21 @@ const getCSS = (variant) => VARIANT_STYLES[variant] || VARIANT_STYLES[BODY_1];
 
 const getComponent = (variant) => VARIANT_COMPONENT[variant] || P;
 
-export function Typography({ variant, children, component }) {
+export function Typography({ children, className, component, variant }) {
   const Component = component || getComponent(variant);
   const styles = getCSS(variant);
 
-  return <Component css={styles}>{children}</Component>;
+  return (
+    <Component css={styles} className={className}>
+      {children}
+    </Component>
+  );
 }
 
 Typography.propTypes = {
   children: PropTypes.node,
+  className: PropTypes.string,
+  component: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   variant: PropTypes.oneOf([
     'h1',
     'h2',
@@ -146,13 +152,13 @@ Typography.propTypes = {
     'body2',
     'button',
   ]),
-  component: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
 };
 
 Typography.defaultProps = {
   children: null,
-  variant: null,
+  className: null,
   component: null,
+  variant: null,
 };
 
 export default Typography;
