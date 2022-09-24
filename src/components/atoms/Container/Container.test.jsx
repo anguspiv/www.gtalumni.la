@@ -17,4 +17,12 @@ describe('<Container />', () => {
       margin-right: auto;
     `);
   });
+
+  it('should render the custom className', () => {
+    expect.assertions(1);
+
+    render(<Container className="test-class">Test Child</Container>);
+
+    expect(screen.getByText('Test Child')).toHaveClass('test-class');
+  });
 });
