@@ -7,6 +7,6 @@ describe('<IndexPage />', () => {
 
     render(<IndexPage />);
 
-    expect(screen.getByText('Cool Styles')).toBeInTheDocument();
+    expect(screen.getByRole('heading', { level: 2, name: 'About Us' })).toBeInTheDocument();
   });
 });
