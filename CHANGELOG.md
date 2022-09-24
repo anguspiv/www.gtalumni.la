@@ -1,3 +1,11 @@
+# [1.8.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.7.0...v1.8.0) (2022-09-24)
+
+
+### Features
+
+* adds about section component ([ef774fb](https://github.com/anguspiv/www.gtalumni.la/commit/ef774fb29e1b405c75602c001df829ca1a46eac5)), closes [#39](https://github.com/anguspiv/www.gtalumni.la/issues/39)
+* **typography:** adds custom classname prop ([2b5954c](https://github.com/anguspiv/www.gtalumni.la/commit/2b5954cf11761797fd25a74f72eada18aabd907e))
+
 # [1.7.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.6.0...v1.7.0) (2022-09-20)
 
 
