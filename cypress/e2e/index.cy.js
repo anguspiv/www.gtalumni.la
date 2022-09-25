@@ -17,4 +17,20 @@ describe('Index Page', () => {
 
     cy.findAllByRole('link', { name: 'Facebook group' }).first().should('exist');
   });
+
+  it('should display the site meta', () => {
+    cy.title().should('eq', 'Georgia Tech Alumni Association of Los Angeles');
+    cy.get('meta[name="description"]').should('have.attr', 'content');
+    cy.get('meta[name="keywords"]').should(
+      'have.attr',
+      'content',
+      'Georgia Tech,Georiga Institute of Technology,Alumni,Alumni Association,Georgia Tech Alumni Association,Yellow Jackets,George P. Burdell',
+    );
+    cy.get('meta[property="og:title"]').should(
+      'have.attr',
+      'content',
+      'Georgia Tech Alumni Association of Los Angeles',
+    );
+    cy.get('meta[property="og:description"]').should('have.attr', 'content');
+  });
 });
