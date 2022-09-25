@@ -1,3 +1,10 @@
+## [1.9.1](https://github.com/anguspiv/www.gtalumni.la/compare/v1.9.0...v1.9.1) (2022-09-25)
+
+
+### Bug Fixes
+
+* **head:** adds url to meta image path ([a71c196](https://github.com/anguspiv/www.gtalumni.la/commit/a71c1967c1fc983a7c000d2473940f7a13f46267))
+
 # [1.9.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.8.0...v1.9.0) (2022-09-25)
 
 
