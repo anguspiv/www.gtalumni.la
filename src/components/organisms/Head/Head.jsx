@@ -38,7 +38,7 @@ export function Head({ title, description, keywords, image }) {
       <meta name="keywords" content={keywords.join(',')} key="keywords" />
 
       <meta name="twitter:card" content="summary_large_image" />
-      <meta property="og:image" content={image.src} />
+      <meta property="og:image" content={`${NEXT_PUBLIC_VERCEL_URL}${image.src}`} />
       <meta name="twitter:image:alt" content={image.alt} />
 
       <meta property="og:url" content={url} key="og:url" />
