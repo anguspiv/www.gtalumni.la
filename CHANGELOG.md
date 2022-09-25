@@ -1,3 +1,10 @@
+# [1.9.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.8.0...v1.9.0) (2022-09-25)
+
+
+### Features
+
+* adds head component for meta data ([ec6bf4e](https://github.com/anguspiv/www.gtalumni.la/commit/ec6bf4ed0f9e0b1698b4602b4eb8e1024bfd6cc2)), closes [#60](https://github.com/anguspiv/www.gtalumni.la/issues/60)
+
 # [1.8.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.7.0...v1.8.0) (2022-09-24)
 
 
