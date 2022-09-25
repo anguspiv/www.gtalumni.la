@@ -25,7 +25,7 @@ export const KEYWORDS = [
 export function Head({ title, description, keywords, image }) {
   const { pathname } = useRouter();
   const { NEXT_PUBLIC_VERCEL_URL } = process.env;
-  const url = `${NEXT_PUBLIC_VERCEL_URL}${pathname}`;
+  const url = `https://${NEXT_PUBLIC_VERCEL_URL}${pathname}`;
 
   return (
     <NextHead>
@@ -38,7 +38,7 @@ export function Head({ title, description, keywords, image }) {
       <meta name="keywords" content={keywords.join(',')} key="keywords" />
 
       <meta name="twitter:card" content="summary_large_image" />
-      <meta property="og:image" content={`${NEXT_PUBLIC_VERCEL_URL}${image.src}`} />
+      <meta property="og:image" content={`https://${NEXT_PUBLIC_VERCEL_URL}${image.src}`} />
       <meta name="twitter:image:alt" content={image.alt} />
 
       <meta property="og:url" content={url} key="og:url" />
