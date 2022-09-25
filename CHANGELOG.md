@@ -1,3 +1,10 @@
+## [1.9.2](https://github.com/anguspiv/www.gtalumni.la/compare/v1.9.1...v1.9.2) (2022-09-25)
+
+
+### Bug Fixes
+
+* **head:** adds protocol to meta urls ([adfdd34](https://github.com/anguspiv/www.gtalumni.la/commit/adfdd34b54221d5b97816e46d564626c80c0a31a))
+
 ## [1.9.1](https://github.com/anguspiv/www.gtalumni.la/compare/v1.9.0...v1.9.1) (2022-09-25)
 
 
