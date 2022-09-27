@@ -1,3 +1,10 @@
+## [1.9.3](https://github.com/anguspiv/www.gtalumni.la/compare/v1.9.2...v1.9.3) (2022-09-27)
+
+
+### Bug Fixes
+
+* **site-banner:** adds bg color to prevent broken look ([65dac5d](https://github.com/anguspiv/www.gtalumni.la/commit/65dac5d71188365cd682e389829abc621c0bfb7f))
+
 ## [1.9.2](https://github.com/anguspiv/www.gtalumni.la/compare/v1.9.1...v1.9.2) (2022-09-25)
 
 
