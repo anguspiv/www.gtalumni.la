@@ -78,7 +78,7 @@
     "semantic-release": "^19.0.5",
     "storybook-addon-next-router": "^4.0.0",
     "storybook-addon-swc": "^1.1.8",
-    "storybook-dark-mode": "^1.1.0",
+    "storybook-dark-mode": "^1.1.2",
     "storybook-docs-toc": "^1.7.0"
   }
 }
