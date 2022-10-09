@@ -33,4 +33,10 @@ describe('Index Page', () => {
     );
     cy.get('meta[property="og:description"]').should('have.attr', 'content');
   });
+
+  it('should display the contact section', () => {
+    cy.findByRole('heading', { name: 'Contact Us' }).should('exist');
+    cy.findByRole('link', { name: 'Facebook Group' }).should('exist');
+    cy.findByRole('link', { name: 'hello@gtalumni.la' }).should('exist');
+  });
 });
