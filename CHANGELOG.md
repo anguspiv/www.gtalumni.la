@@ -1,3 +1,15 @@
+# [1.10.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.9.3...v1.10.0) (2022-10-09)
+
+
+### Bug Fixes
+
+* **Typography:** fixes prop type errors ([084d629](https://github.com/anguspiv/www.gtalumni.la/commit/084d629080ab6e598e7860bed4e9c9aa40cd3fd2))
+
+
+### Features
+
+* adds contact section ([9990a8b](https://github.com/anguspiv/www.gtalumni.la/commit/9990a8b2435a7f6420d62150d176550b962239ec)), closes [#80](https://github.com/anguspiv/www.gtalumni.la/issues/80)
+
 ## [1.9.3](https://github.com/anguspiv/www.gtalumni.la/compare/v1.9.2...v1.9.3) (2022-09-27)
 
 
