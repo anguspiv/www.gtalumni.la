@@ -138,7 +138,7 @@ export function Typography({ children, className, component, variant }) {
 Typography.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
-  component: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
+  component: PropTypes.oneOfType([PropTypes.string, PropTypes.element, PropTypes.elementType]),
   variant: PropTypes.oneOf([
     'h1',
     'h2',

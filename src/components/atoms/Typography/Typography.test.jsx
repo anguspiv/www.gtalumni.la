@@ -54,7 +54,7 @@ describe('<Typography />', () => {
 
   it.each([
     ['h1', 'span', 'SPAN'],
-    ['n/a', 'div', 'DIV'],
+    [null, 'div', 'DIV'],
   ])('should render variant %s with %s element', (variant, component, nodeName) => {
     expect.assertions(2);
 
