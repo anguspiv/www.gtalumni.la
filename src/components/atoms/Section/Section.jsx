@@ -4,10 +4,10 @@ import { rem } from 'polished';
 import { isNumber, isString } from 'radash';
 import { Container } from '@components/atoms/Container';
 
-export function Section({ align, className, children, maxWidth, variant }) {
+export function Section({ align, className, children, maxWidth, background }) {
   let bgColor = 'var(--gt-color-background-primary)';
 
-  switch (variant) {
+  switch (background) {
     case 'secondary':
       bgColor = 'var(--gt-color-background-secondary)';
       break;
@@ -38,6 +38,8 @@ export function Section({ align, className, children, maxWidth, variant }) {
       css={css`
         background-color: ${bgColor};
         text-align: ${align};
+        padding-top: 1rem;
+        padding-bottom: 1rem;
       `}
     >
       <Container
@@ -56,7 +58,7 @@ Section.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
   maxWidth: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  variant: PropTypes.oneOf(['primary', 'secondary', 'alt', 'alt-secondary']),
+  background: PropTypes.oneOf(['primary', 'secondary', 'alt', 'alt-secondary']),
 };
 
 Section.defaultProps = {
@@ -64,7 +66,7 @@ Section.defaultProps = {
   children: null,
   className: '',
   maxWidth: null,
-  variant: 'primary',
+  background: 'primary',
 };
 
 export default Section;
