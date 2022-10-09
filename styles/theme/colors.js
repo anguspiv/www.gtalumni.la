@@ -71,11 +71,46 @@ export const background = css`
   --gt-color-background-alt-secondary: ${colorValues.navy};
 `;
 
+export const social = css`
+  --gt-color-social-facebook: #3b5998;
+  --gt-color-social-twitter: #1da1f2;
+  --gt-color-social-instagram: #e1306c;
+  --gt-color-social-linkedin: #0077b5;
+  --gt-color-social-youtube: #ff0000;
+  --gt-color-social-github: #333333;
+  --gt-color-social-slack: #4a154b;
+  --gt-color-social-discord: #7289da;
+  --gt-color-social-medium: #00ab6c;
+  --gt-color-social-reddit: #ff4500;
+  --gt-color-social-twitch: #6441a5;
+  --gt-color-social-telegram: #0088cc;
+  --gt-color-social-whatsapp: #25d366;
+  --gt-color-social-pinterest: #bd081c;
+  --gt-color-social-vimeo: #1ab7ea;
+  --gt-color-social-tumblr: #35465c;
+  --gt-color-social-snapchat: #fffc00;
+  --gt-color-social-flickr: #ff0084;
+  --gt-color-social-vine: #00b488;
+  --gt-color-social-yahoo: #400191;
+  --gt-color-social-behance: #1769ff;
+  --gt-color-social-dribbble: #ea4c89;
+  --gt-color-social-foursquare: #0072b1;
+  --gt-color-social-soundcloud: #ff5500;
+  --gt-color-social-spotify: #1ed760;
+  --gt-color-social-stumbleupon: #eb4924;
+  --gt-color-social-vk: #4c75a3;
+  --gt-color-social-weibo: #e6162d;
+  --gt-color-social-xing: #006567;
+  --gt-color-social-yelp: #d32323;
+  --gt-color-social-rss: #ff6600;
+`;
+
 export const colors = css`
   ${brand}
   ${background}
   ${status}
   ${text}
+  ${social}
 `;
 
 export default colors;

@@ -19,7 +19,7 @@ describe('<Section />', () => {
   it('should render with secondary background color', () => {
     expect.assertions(1);
 
-    render(<Section variant="secondary" />);
+    render(<Section background="secondary" />);
 
     expect(screen.getByTestId('section')).toHaveStyle(`
       background-color: ${parseToRgb('#f9f6e5')};
@@ -29,7 +29,7 @@ describe('<Section />', () => {
   it('should render with alt background color', () => {
     expect.assertions(1);
 
-    render(<Section variant="alt" />);
+    render(<Section background="alt" />);
 
     expect(screen.getByTestId('section')).toHaveStyle(`
       background-color: ${parseToRgb('#262626')};
@@ -39,7 +39,7 @@ describe('<Section />', () => {
   it('should render with alt secondary background color', () => {
     expect.assertions(1);
 
-    render(<Section variant="alt-secondary" />);
+    render(<Section background="alt-secondary" />);
 
     expect(screen.getByTestId('section')).toHaveStyle(`
       background-color: ${parseToRgb('#003057')};

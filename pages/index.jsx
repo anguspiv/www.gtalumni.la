@@ -1,10 +1,12 @@
 import { AboutSection } from '@components/organisms/AboutSection';
+import { ContactSection } from '@components/organisms/ContactSection';
 
 function Home() {
   return (
-    <main>
+    <>
       <AboutSection />
-    </main>
+      <ContactSection />
+    </>
   );
 }
 
