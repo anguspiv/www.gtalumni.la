@@ -3,7 +3,7 @@ import { Map } from './Map';
 
 describe('<Map />', () => {
   it('should render the map', () => {
-    expect.assertions(1);
+    expect.assertions(2);
 
     const title = 'My Map';
     const address = {
@@ -13,9 +13,11 @@ describe('<Map />', () => {
       state: 'OR',
       zip: '12345',
     };
+    const className = 'my-map';
 
-    render(<Map title={title} address={address} width={100} height="75%" />);
+    render(<Map title={title} address={address} width={100} height="75%" className={className} />);
 
     expect(screen.getByTitle(`Map of ${title}`)).toBeInTheDocument();
+    expect(screen.getByTestId('map')).toHaveClass(className);
   });
 });
