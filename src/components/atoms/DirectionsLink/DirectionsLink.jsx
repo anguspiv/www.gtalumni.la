@@ -3,22 +3,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRoute } from '@fortawesome/free-solid-svg-icons';
 import styled from '@emotion/styled';
 import { Link } from '@components/atoms/Link';
+import { getEncodedAddress } from '@utils/address';
 
 const Icon = styled(FontAwesomeIcon)`
   margin-right: 0.5rem;
 `;
-
-const getEncodedAddress = ({ street, street2, city, state, zip }) => {
-  let str = `${street},`;
-
-  if (street2) {
-    str = `${street},${street2},`;
-  }
-
-  str = `${str}${city},${state} ${zip}`;
-
-  return encodeURIComponent(str);
-};
 
 const getDirectionsUrl = (address) => {
   const addressStr = getEncodedAddress(address);

@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
 import { rem } from 'polished';
+import { getEncodedAddress } from '@utils/address';
 
 export function Map({ address, title, width, height }) {
-  const { street, street2, city, state, zip } = address;
-  const mapUrl = `https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API}&q=${title}+${street}+${street2}+${city}+${state}+${zip}`;
+  const encodedAddress = getEncodedAddress(address);
+  const mapUrl = `https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API}&q=${encodedAddress}`;
 
   let mapWidth = width;
   let mapHeight = height;
