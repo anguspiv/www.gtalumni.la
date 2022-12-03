@@ -1,16 +1,16 @@
-import { Address } from './Address';
+import { LocationCard } from './LocationCard';
 
 export default {
-  component: Address,
-  title: 'Components/Atoms/Address',
+  component: LocationCard,
+  title: 'Components/Organisms/LocationCard',
 };
 
-const Template = (args) => <Address {...args} />;
+const Template = (args) => <LocationCard {...args} />;
 
 export const Default = Template.bind({});
 
 Default.args = {
-  title: 'My Address',
+  title: 'Georgia Tech',
   href: 'https://www.gatech.edu',
   address: {
     street: '1 North Ave NW',

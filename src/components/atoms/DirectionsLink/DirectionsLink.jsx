@@ -16,11 +16,11 @@ const getDirectionsUrl = (address) => {
   return url;
 };
 
-export function DirectionsLink({ address }) {
+export function DirectionsLink({ address, className }) {
   const url = getDirectionsUrl(address);
 
   return (
-    <Link href={url} target="_blank" rel="noopener noreferrer">
+    <Link href={url} target="_blank" rel="noopener noreferrer" className={className}>
       <Icon icon={faRoute} />
       Get Directions
     </Link>
@@ -35,8 +35,11 @@ DirectionsLink.propTypes = {
     state: PropTypes.string.isRequired,
     zip: PropTypes.string.isRequired,
   }).isRequired,
+  className: PropTypes.string,
 };
 
-DirectionsLink.defaultProps = {};
+DirectionsLink.defaultProps = {
+  className: null,
+};
 
 export default DirectionsLink;

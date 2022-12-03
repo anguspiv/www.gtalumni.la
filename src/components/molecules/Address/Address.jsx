@@ -15,27 +15,18 @@ const Line = styled(Typography)`
   line-height: 1.5;
 `;
 
-export function Address({ title, address }) {
+export function Address({ title, address, href, className }) {
+  const url = href || `https://www.google.com/maps/place/${getEncodedAddress(address)}`;
+
   return (
-    <StyledAddress>
-      <Line variant="h6">
-        <Link
-          href={`https://www.google.com/maps/place/${getEncodedAddress(address)}`}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+    <StyledAddress className={className} data-testid="address">
+      <Line variant="h5">
+        <Link href={url} target="_blank" rel="noopener noreferrer">
           {title}
         </Link>
       </Line>
-      <Line variant="body1">
-        {address.street}
-        {address.street2 && (
-          <>
-            <br />
-            {address.street2}
-          </>
-        )}
-      </Line>
+      <Line variant="body1">{address.street}</Line>
+      {address.street2 && <Line variant="body1">{address.street2}</Line>}
       <Line variant="body1">
         {address.city}, {address.state} {address.zip}
       </Line>
@@ -52,6 +43,13 @@ Address.propTypes = {
     zip: PropTypes.string.isRequired,
   }).isRequired,
   title: PropTypes.string.isRequired,
+  href: PropTypes.string,
+  className: PropTypes.string,
+};
+
+Address.defaultProps = {
+  href: null,
+  className: null,
 };
 
 export default Address;
