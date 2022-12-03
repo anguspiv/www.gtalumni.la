@@ -1,3 +1,10 @@
+# [1.14.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.13.0...v1.14.0) (2022-12-03)
+
+
+### Features
+
+* adds the breadcrumbs component ([753a16a](https://github.com/anguspiv/www.gtalumni.la/commit/753a16a2eeea6459135929f874e9a0a976461f5a)), closes [#120](https://github.com/anguspiv/www.gtalumni.la/issues/120)
+
 # [1.13.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.12.0...v1.13.0) (2022-12-03)
 
 
