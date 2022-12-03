@@ -1,3 +1,11 @@
+# [1.12.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.11.0...v1.12.0) (2022-12-03)
+
+
+### Features
+
+* adds add-to-calendar button ([90c12d8](https://github.com/anguspiv/www.gtalumni.la/commit/90c12d8896dad52218ddbc9d25ca0a3c6f9acc26)), closes [#110](https://github.com/anguspiv/www.gtalumni.la/issues/110)
+* adds button component ([c7432ab](https://github.com/anguspiv/www.gtalumni.la/commit/c7432ab33a56d7e15a4b49ce0f2f847029432ed6))
+
 # [1.11.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.10.0...v1.11.0) (2022-12-03)
 
 
