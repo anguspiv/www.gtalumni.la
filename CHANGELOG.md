@@ -1,3 +1,10 @@
+# [1.11.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.10.0...v1.11.0) (2022-12-03)
+
+
+### Features
+
+* adds image component ([810d12e](https://github.com/anguspiv/www.gtalumni.la/commit/810d12ebc68fe1db9ca441fa6e273cf40c2782a9)), closes [#107](https://github.com/anguspiv/www.gtalumni.la/issues/107)
+
 # [1.10.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.9.3...v1.10.0) (2022-10-09)
 
 
