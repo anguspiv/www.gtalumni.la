@@ -1,16 +1,13 @@
 import PropTypes from 'prop-types';
-import createCache from '@emotion/cache';
-import { CacheProvider, Global } from '@emotion/react';
+import { Global } from '@emotion/react';
 import Script from 'next/script';
+import { globalStyles } from '@styles/global';
 import { Head } from '@components/organisms/Head';
-import { globalStyles } from '@styles/index';
 import { Page } from '@components/templates/Page';
-
-const cache = createCache({ key: 'css', prepend: true });
 
 function App({ Component, pageProps }) {
   return (
-    <CacheProvider value={cache}>
+    <>
       <Script
         id="gtag"
         strategy="lazyOnload"
@@ -31,7 +28,7 @@ function App({ Component, pageProps }) {
       <Page>
         <Component {...pageProps} />
       </Page>
-    </CacheProvider>
+    </>
   );
 }
 
