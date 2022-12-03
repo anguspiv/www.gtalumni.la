@@ -1,7 +1,11 @@
-import { Global, ThemeProvider } from '@emotion/react';
+import createCache from '@emotion/cache';
+import { CacheProvider, Global, ThemeProvider } from '@emotion/react';
+import { RouterContext } from 'next/dist/shared/lib/router-context';
 import * as NextImage from 'next/image';
 import { globalStyles } from '@styles/global';
 import { theme } from '@styles/theme';
+
+const cache = createCache({ key: 'css', prepend: true });
 
 const OriginalNextImage = NextImage.default;
 
@@ -19,10 +23,12 @@ Object.defineProperty(NextImage, 'default', {
 export const decorators = [
   (Story) => {
     return (
-      <ThemeProvider theme={theme}>
-        <Global styles={globalStyles} />
-        <Story />
-      </ThemeProvider>
+      <CacheProvider value={cache}>
+        <ThemeProvider theme={theme}>
+          <Global styles={globalStyles} />
+          <Story />
+        </ThemeProvider>
+      </CacheProvider>
     );
   },
 ];
@@ -34,5 +40,8 @@ export const parameters = {
       color: /(background|color)$/i,
       date: /Date$/,
     },
+  },
+  nextRouter: {
+    Provider: RouterContext.Provider,
   },
 };
