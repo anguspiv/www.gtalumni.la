@@ -1,3 +1,14 @@
+# [1.13.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.12.0...v1.13.0) (2022-12-03)
+
+
+### Features
+
+* adds a directions link component ([fac752f](https://github.com/anguspiv/www.gtalumni.la/commit/fac752f378f0d6fcee2f2e2a3022902b4de0067d)), closes [#109](https://github.com/anguspiv/www.gtalumni.la/issues/109)
+* adds a generic wrappeer for nav links ([2490545](https://github.com/anguspiv/www.gtalumni.la/commit/2490545502bd290e25fd254fafd391a38ba02d77))
+* adds a google map embed component ([16412d2](https://github.com/anguspiv/www.gtalumni.la/commit/16412d2c2323c5c6b1fa55faa5d1cc7c75332d9c)), closes [#109](https://github.com/anguspiv/www.gtalumni.la/issues/109)
+* adds the address component ([7e6f899](https://github.com/anguspiv/www.gtalumni.la/commit/7e6f899cc93939a2081e8d875ff334919f0da782)), closes [#109](https://github.com/anguspiv/www.gtalumni.la/issues/109)
+* adds the location card component ([161cd68](https://github.com/anguspiv/www.gtalumni.la/commit/161cd68ab75cbf59c6785e4989cbc3b2a80929b8)), closes [#109](https://github.com/anguspiv/www.gtalumni.la/issues/109)
+
 # [1.12.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.11.0...v1.12.0) (2022-12-03)
 
 
