@@ -3,7 +3,7 @@ import { PageHeader } from './PageHeader';
 
 describe('<PageHeader />', () => {
   it('should render the PageHeader component', () => {
-    expect.assertions(3);
+    expect.assertions(4);
 
     const title = 'Page Title';
     const className = 'test-class';
@@ -15,10 +15,19 @@ describe('<PageHeader />', () => {
       test: 'Weee',
     };
 
-    render(<PageHeader title={title} className={className} location={location} labels={labels} />);
+    render(
+      <PageHeader
+        title={title}
+        className={className}
+        location={location}
+        labels={labels}
+        subtitle="Test Subtitle"
+      />,
+    );
     expect(screen.getByRole('heading')).toHaveTextContent(title);
     expect(screen.getByTestId('page-header')).toHaveClass(className);
     expect(screen.getByRole('link', { name: labels.test })).toHaveAttribute('href', '/test');
+    expect(screen.getByText('Test Subtitle')).toBeInTheDocument();
   });
 
   it('should render the PageHeader component with no location', () => {
