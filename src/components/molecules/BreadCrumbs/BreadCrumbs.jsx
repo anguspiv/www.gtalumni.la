@@ -2,6 +2,8 @@ import PropTypes from 'prop-types';
 import { css } from '@emotion/react';
 import { rem } from 'polished';
 import Link from 'next/link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
 const listCss = css`
   display: flex;
@@ -14,15 +16,22 @@ const listCss = css`
 
 const listItemCss = css`
   margin: 0;
-  font-size: ${rem('12px')};
+  font-size: ${rem('14px')};
+  font-weight: 400;
 `;
 
 const crumbCss = css`
+  color: var(--gt-color-dark-gray);
   transition: all 0.2s ease-in-out;
+
+  &:hover {
+    color: var(--gt-color-dark-gold);
+  }
 `;
 
-const separatorCss = css`
+const iconCss = css`
   margin: 0 0.25rem;
+  color: var(--gt-color-gold);
 `;
 
 const toTitleCase = (str) =>
@@ -60,7 +69,7 @@ export function BreadCrumbs({ labels, location, className }) {
         </li>
         {crumbs.map(({ label, path, isLast }) => (
           <li key={path} css={listItemCss}>
-            <span css={separatorCss}>/</span>
+            <FontAwesomeIcon icon={faChevronRight} css={iconCss} />
             {isLast ? (
               <span>{label}</span>
             ) : (
