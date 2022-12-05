@@ -14,4 +14,7 @@ Default.args = {
     pathname: '/example/storybook/path',
     search: '?example=query',
   },
+  labels: {
+    path: 'Current Page',
+  },
 };
