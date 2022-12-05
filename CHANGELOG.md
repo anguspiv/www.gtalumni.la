@@ -1,3 +1,12 @@
+# [1.15.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.14.0...v1.15.0) (2022-12-05)
+
+
+### Features
+
+* adds page header component ([638a8d1](https://github.com/anguspiv/www.gtalumni.la/commit/638a8d1e7323bbec1fa0c1e92cc23027a98f73ed)), closes [#108](https://github.com/anguspiv/www.gtalumni.la/issues/108)
+* **breadcrumbs:** removes the current page crumb ([1e77582](https://github.com/anguspiv/www.gtalumni.la/commit/1e775820a06b162fd881400df9d03dfce02d39bc))
+* **breadcrumbs:** updates separator icon ([0415cf1](https://github.com/anguspiv/www.gtalumni.la/commit/0415cf1731d597001dec1417e133a072c0409b10))
+
 # [1.14.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.13.0...v1.14.0) (2022-12-03)
 
 
