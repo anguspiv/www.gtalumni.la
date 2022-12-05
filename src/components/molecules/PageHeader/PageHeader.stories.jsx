@@ -19,4 +19,5 @@ Default.args = {
     storybook: 'Previous Page',
   },
   title: 'Page Title',
+  subtitle: 'Page Subtitle',
 };
