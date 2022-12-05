@@ -17,7 +17,7 @@ describe('<BreadCrumbs />', () => {
 
     expect(screen.getByRole('link', { name: 'Somewhere' })).toHaveAttribute('href', '/somewhere');
 
-    expect(screen.getByText('Foo')).toBeInTheDocument();
+    expect(screen.queryByText('Foo')).not.toBeInTheDocument();
 
     expect(screen.getByRole('link', { name: 'And Again or Not' })).toHaveAttribute(
       'href',

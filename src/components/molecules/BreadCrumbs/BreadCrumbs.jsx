@@ -12,12 +12,13 @@ const listCss = css`
   margin: 0;
   padding: 0;
   list-style: none;
+  flex-wrap: wrap;
 `;
 
 const listItemCss = css`
   margin: 0;
   font-size: ${rem('14px')};
-  font-weight: 400;
+  font-weight: 500;
 `;
 
 const crumbCss = css`
@@ -44,18 +45,6 @@ export function BreadCrumbs({ labels, location, className }) {
   const { pathname } = location;
   const segments = pathname.split('/').filter(Boolean);
 
-  const crumbs = segments.map((segment, index) => {
-    const isLast = index === segments.length - 1;
-    const label = labels[segment] || toTitleCase(segment);
-    const path = `/${segments.slice(0, index + 1).join('/')}`;
-
-    return {
-      label,
-      path,
-      isLast,
-    };
-  });
-
   return (
     <nav data-testid="breadcrumbs" className={className}>
       <ul css={listCss}>
@@ -67,20 +56,27 @@ export function BreadCrumbs({ labels, location, className }) {
             </a>
           </Link>
         </li>
-        {crumbs.map(({ label, path, isLast }) => (
-          <li key={path} css={listItemCss}>
-            <FontAwesomeIcon icon={faChevronRight} css={iconCss} />
-            {isLast ? (
-              <span>{label}</span>
-            ) : (
+        {segments.map((segment, index) => {
+          const isLast = index === segments.length - 1;
+
+          if (isLast) {
+            return null;
+          }
+
+          const label = labels[segment] || toTitleCase(segment);
+          const path = `/${segments.slice(0, index + 1).join('/')}`;
+
+          return (
+            <li key={path} css={listItemCss}>
+              <FontAwesomeIcon css={iconCss} icon={faChevronRight} />
               <Link href={path} passHref>
                 <a css={crumbCss} href={path}>
                   {label}
                 </a>
               </Link>
-            )}
-          </li>
-        ))}
+            </li>
+          );
+        })}
       </ul>
     </nav>
   );
