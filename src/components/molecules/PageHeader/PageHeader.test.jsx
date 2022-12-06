@@ -8,7 +8,7 @@ describe('<PageHeader />', () => {
     const title = 'Page Title';
     const className = 'test-class';
     const location = {
-      pathname: '/test/path',
+      asPath: '/test/path',
     };
 
     const labels = {

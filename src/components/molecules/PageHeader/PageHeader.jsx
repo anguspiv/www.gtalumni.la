@@ -5,7 +5,7 @@ import { Typography } from '@components/atoms/Typography';
 
 const Title = styled.h1`
   color: var(--gt-color-dark-gold);
-  margin-bottom: 0;
+  margin-top: 0;
 `;
 
 const Subtitle = styled(Typography)`
@@ -15,15 +15,19 @@ const Subtitle = styled(Typography)`
 `;
 
 const Header = styled.header`
-  margin-bottom: 1rem;
+  margin: 1.5rem auto 1rem;
+`;
+
+const Crumbs = styled(BreadCrumbs)`
+  margin-bottom: 0.5rem;
 `;
 
 export function PageHeader({ className, labels, location, title, subtitle }) {
   return (
     <Header data-testid="page-header" className={className}>
+      {location && <Crumbs labels={labels} location={location} />}
       <Title>{title}</Title>
       {subtitle && <Subtitle>{subtitle}</Subtitle>}
-      {location && <BreadCrumbs labels={labels} location={location} />}
     </Header>
   );
 }

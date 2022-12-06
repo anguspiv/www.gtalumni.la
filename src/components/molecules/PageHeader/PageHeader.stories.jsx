@@ -12,7 +12,7 @@ export const Default = Template.bind({});
 Default.args = {
   className: 'test-class',
   location: {
-    pathname: '/example/storybook/path',
+    asPath: '/example/storybook/path',
     search: '?example=query',
   },
   labels: {
