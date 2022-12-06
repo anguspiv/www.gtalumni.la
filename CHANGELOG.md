@@ -1,3 +1,18 @@
+# [1.16.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.15.0...v1.16.0) (2022-12-06)
+
+
+### Bug Fixes
+
+* **bread-crumbs:** updates to use correct location path ([e83e3d5](https://github.com/anguspiv/www.gtalumni.la/commit/e83e3d5ce6f61a735bbddbeae8ffbda44547484a))
+
+
+### Features
+
+* **add-to-calendar:** allows to set options on event ([9eed718](https://github.com/anguspiv/www.gtalumni.la/commit/9eed71830014f05035fb5eb47ebf2236c7e93bf9))
+* adds code to generate events pages ([dd1fbc6](https://github.com/anguspiv/www.gtalumni.la/commit/dd1fbc650b326a83ce63bda9df89d95331865412)), closes [#106](https://github.com/anguspiv/www.gtalumni.la/issues/106)
+* **page-header:** adds subtitle ([74cb85c](https://github.com/anguspiv/www.gtalumni.la/commit/74cb85c39936fcedb1060e8fea6798f7f989f282))
+* **page-header:** moves bread crumbs to top ([aac75aa](https://github.com/anguspiv/www.gtalumni.la/commit/aac75aad7e89e27f8cb1c771b56519ac209c3979))
+
 # [1.15.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.14.0...v1.15.0) (2022-12-05)
 
 
