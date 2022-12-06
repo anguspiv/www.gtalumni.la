@@ -6,7 +6,8 @@ describe('<BreadCrumbs />', () => {
     expect.assertions(5);
 
     const location = {
-      pathname: '/somewhere/else-where/and-again/foo',
+      asPath: '/somewhere/else-where/and-again/foo',
+      isReady: true,
     };
 
     const labels = {
