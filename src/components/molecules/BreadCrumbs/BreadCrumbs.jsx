@@ -42,8 +42,9 @@ const toTitleCase = (str) =>
     .join(' ');
 
 export function BreadCrumbs({ labels, location, className }) {
-  const { pathname } = location;
-  const segments = pathname.split('/').filter(Boolean);
+  const { asPath } = location;
+
+  const segments = asPath.split('/').filter(Boolean);
 
   return (
     <nav data-testid="breadcrumbs" className={className}>
@@ -63,7 +64,7 @@ export function BreadCrumbs({ labels, location, className }) {
             return null;
           }
 
-          const label = labels[segment] || toTitleCase(segment);
+          const label = (labels && labels[segment]) || toTitleCase(segment);
           const path = `/${segments.slice(0, index + 1).join('/')}`;
 
           return (
@@ -85,8 +86,9 @@ export function BreadCrumbs({ labels, location, className }) {
 BreadCrumbs.propTypes = {
   className: PropTypes.string,
   location: PropTypes.shape({
-    pathname: PropTypes.string,
+    asPath: PropTypes.string,
     search: PropTypes.string,
+    isReady: PropTypes.bool,
   }),
   labels: PropTypes.shape({}),
 };
@@ -94,8 +96,9 @@ BreadCrumbs.propTypes = {
 BreadCrumbs.defaultProps = {
   className: null,
   location: {
-    pathname: '',
+    asPath: '',
     search: '',
+    isReady: false,
   },
   labels: {},
 };
