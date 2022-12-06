@@ -11,15 +11,14 @@ const Icon = styled(FontAwesomeIcon)`
   margin-right: 0.5rem;
 `;
 
-export function AddToCalendar({ name, startDate, endDate, className }) {
+export function AddToCalendar({ name, className, ...props }) {
   const onClick = () =>
     addEventToCalendar({
       name,
-      startDate,
-      endDate,
       options: ['Apple', 'Google', 'iCal', 'Microsoft365', 'Outlook.com', 'Yahoo'],
       timeZone: 'America/Los_Angeles',
       iCalFileName: dash(name),
+      ...props,
     });
 
   return (
@@ -34,12 +33,16 @@ AddToCalendar.propTypes = {
   name: PropTypes.string.isRequired,
   startDate: PropTypes.string,
   endDate: PropTypes.string,
+  startTime: PropTypes.string,
+  endTime: PropTypes.string,
   className: PropTypes.string,
 };
 
 AddToCalendar.defaultProps = {
   startDate: null,
   endDate: null,
+  startTime: null,
+  endTime: null,
   className: null,
 };
 
