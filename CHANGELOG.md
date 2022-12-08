@@ -1,3 +1,12 @@
+# [1.17.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.16.0...v1.17.0) (2022-12-08)
+
+
+### Features
+
+* **components:** adds event card ([e3bed36](https://github.com/anguspiv/www.gtalumni.la/commit/e3bed3675c17b267db572262aacdf42069b30ab0)), closes [#112](https://github.com/anguspiv/www.gtalumni.la/issues/112)
+* **components:** adds event list ([e3d6d7d](https://github.com/anguspiv/www.gtalumni.la/commit/e3d6d7d5fd0b9c27df5f2b9c5c4dc1d61371f9ec)), closes [#112](https://github.com/anguspiv/www.gtalumni.la/issues/112)
+* **event-card:** adjusts title spacing ([ec5ea9b](https://github.com/anguspiv/www.gtalumni.la/commit/ec5ea9b410cae62468bdf235269f05c565fa1cfa))
+
 # [1.16.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.15.0...v1.16.0) (2022-12-06)
 
 
