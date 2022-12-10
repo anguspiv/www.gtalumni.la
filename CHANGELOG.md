@@ -1,3 +1,10 @@
+# [1.18.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.17.0...v1.18.0) (2022-12-10)
+
+
+### Features
+
+* **event-card:** adds hover state for event card ([8b2e1e1](https://github.com/anguspiv/www.gtalumni.la/commit/8b2e1e1ad137f6f1fc38d37bf8ae35706b7f0edf))
+
 # [1.17.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.16.0...v1.17.0) (2022-12-08)
 
 
