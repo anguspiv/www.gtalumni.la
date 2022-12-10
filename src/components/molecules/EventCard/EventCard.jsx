@@ -43,12 +43,22 @@ const CardContent = styled.div`
 const Title = styled.h5`
   margin: 0.5rem auto 0;
   color: var(--gt-color-navy);
+  transition: color 0.2s ease-in-out;
+
+  ${CardLink}:hover & {
+    color: var(--gt-color-blue);
+    text-decoration: underline;
 `;
 
 const StartDate = styled.p`
   margin: 0;
   color: var(--gt-color-dark-gold);
   font-weight: 600;
+  transition: color 0.2s ease-in-out;
+
+  ${CardLink}:hover & {
+    color: var(--gt-color-gold);
+  }
 `;
 
 const Description = styled.p`
