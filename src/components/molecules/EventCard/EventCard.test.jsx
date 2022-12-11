@@ -41,7 +41,7 @@ describe('<EventCard />', () => {
       'href',
       '/events/2021/01/example-event',
     );
-    expect(screen.getByText('Learn More')).toHaveAttribute('/events/2021/01/example-event');
+    expect(screen.getByText('Learn More')).toHaveAttribute('href', '/events/2021/01/example-event');
   });
 
   it('should render the event without an image', () => {
