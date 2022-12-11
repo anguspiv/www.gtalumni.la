@@ -110,6 +110,22 @@ export const getEventsByMonth = (params, fields = []) => {
   return events;
 };
 
+export const getEventsByYear = (params, fields = []) => {
+  const slugs = getEventSlugsByYear(params);
+
+  const events = Object.keys(slugs).reduce((acc, month) => {
+    const monthSlugs = slugs[month];
+
+    const monthEvents = monthSlugs.map((slug) =>
+      getEventByDateAndSlug({ ...params, month }, slug, fields),
+    );
+
+    return [...acc, ...monthEvents];
+  }, []);
+
+  return events;
+};
+
 export default {
   getEventByDateAndSlug,
   getEventSlugsByMonth,
