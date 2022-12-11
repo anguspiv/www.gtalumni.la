@@ -4,7 +4,9 @@ import { EventCard } from '@components/molecules/EventCard';
 
 const Title = styled.h2`
   text-align: center;
+  color: var(--gt-color-navy);
 `;
+
 const Wrapper = styled.div``;
 const NoResults = styled.p`
   text-align: center;
