@@ -1,3 +1,12 @@
+# [1.19.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.18.0...v1.19.0) (2022-12-11)
+
+
+### Features
+
+* adds the events month page ([af1a55d](https://github.com/anguspiv/www.gtalumni.la/commit/af1a55dec434465ffdee6a1ce165e3074fe945e1)), closes [#114](https://github.com/anguspiv/www.gtalumni.la/issues/114)
+* **button:** add style variant and as prop ([2629a88](https://github.com/anguspiv/www.gtalumni.la/commit/2629a88c4624647eabb1a819816011897b3196c5))
+* **event-card:** updates look and styles ([4261cb4](https://github.com/anguspiv/www.gtalumni.la/commit/4261cb482559f356b382bc58e3ec3b44c07039a7))
+
 # [1.18.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.17.0...v1.18.0) (2022-12-10)
 
 
