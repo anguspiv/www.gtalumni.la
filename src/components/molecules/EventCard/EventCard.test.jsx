@@ -8,7 +8,7 @@ jest.mock('add-to-calendar-button', () => ({
 
 describe('<EventCard />', () => {
   it('should render the event', () => {
-    expect.assertions(7);
+    expect.assertions(8);
 
     render(
       <EventCard
@@ -34,10 +34,14 @@ describe('<EventCard />', () => {
     expect(screen.getByTestId('event-card')).toHaveClass('example-class');
     expect(screen.getByText('Example Event')).toBeInTheDocument();
     expect(screen.getByText('This is an example event.')).toBeInTheDocument();
-    expect(screen.getByText('January 1, 2021 @ 12:00 PM')).toBeInTheDocument();
+    expect(screen.getByText('Jan. 1st @ 12:00 PM')).toBeInTheDocument();
     expect(screen.getByRole('img', { name: 'Example Event' })).toHaveAttribute('src');
     expect(screen.getByRole('button', { name: 'Add To Calendar' })).toBeInTheDocument();
-    expect(screen.getByRole('link')).toHaveAttribute('href', '/events/2021/01/example-event');
+    expect(screen.getByText('Example Event')).toHaveAttribute(
+      'href',
+      '/events/2021/01/example-event',
+    );
+    expect(screen.getByText('Learn More')).toHaveAttribute('/events/2021/01/example-event');
   });
 
   it('should render the event without an image', () => {

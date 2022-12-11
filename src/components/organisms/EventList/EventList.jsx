@@ -16,12 +16,12 @@ const List = styled.ul`
   padding: 0;
   margin: 0;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: stretch;
 
   li {
-    margin: 0 1rem 2.5rem;
+    margin: 0.5rem 0;
   }
 `;
 
@@ -32,7 +32,7 @@ const Card = styled(EventCard)`
 export function EventList({ title, events }) {
   return (
     <Wrapper>
-      <Title>{title}</Title>
+      {title && <Title>{title}</Title>}
       {events?.length === 0 && <NoResults>No events found.</NoResults>}
       {events?.length && (
         <List>
@@ -64,7 +64,7 @@ EventList.propTypes = {
 
 EventList.defaultProps = {
   events: [],
-  title: 'Events',
+  title: '',
 };
 
 export default EventList;

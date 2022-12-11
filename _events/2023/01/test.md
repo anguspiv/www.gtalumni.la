@@ -2,10 +2,10 @@
 title: 'Test Event'
 startDate: '2023-01-26T19:00:00-05:00'
 endDate: '2023-01-26T22:00:00-05:00'
-shortDescription: 'This is a test event for development'
+description: 'This is a test event for development'
 image: /img/events/2023/01/test.jpg
 location:
-  title: 'Georgia Institute of Technology'
+  name: 'Georgia Institute of Technology'
   href: 'https://www.gatech.edu/'
   address:
     street: '1 North Ave NW'
