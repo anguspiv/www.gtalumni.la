@@ -3,51 +3,69 @@ import { parseISO, format } from 'date-fns';
 import Image from 'next/image';
 import Link from 'next/link';
 import styled from '@emotion/styled';
+import { css } from '@emotion/react';
 import { AddToCalendar } from '@components/atoms/AddToCalendar';
 import { getLocationString } from '@utils/address';
+import { media } from '@styles/utils/breakpoints';
+import { Button } from '@components/atoms/Button';
 
 const Card = styled.div`
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-temaplate-rows: auto 1fr auto;
+  grid-template-columns: 1fr;
+  grid-template-areas: 'media' 'content' 'footer';
   width: 100%;
-  max-width: 400px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--gt-color-light-gray);
   border-radius: 0.5rem;
   overflow: hidden;
   min-width: 320px;
+
+  ${media.md} {
+    grid-template-columns: minmax(240px, 320px) 1fr;
+    grid-template-rows: 1fr auto;
+    grid-template-areas: 'media content' 'media footer';
+  }
 `;
 
-const CardLink = styled.a`
-  cursor: pointer;
-  text-decoration: none;
-  color: inherit;
-  flex: 0 1 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-`;
-
-const ImageFrame = styled.div`
+const CardMedia = styled.div`
+  grid-area: media;
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 10;
-  flex: 0 0 auto;
 `;
 
 const CardContent = styled.div`
+  grid-area: content;
   padding: 0.5rem 1rem 0rem;
   text-align: center;
-  flex: 0 1 100%;
+
+  ${media.md} {
+    text-align: left;
+  }
 `;
 
-const Title = styled.h5`
-  margin: 0.5rem auto 0;
-  color: var(--gt-color-navy);
-  transition: color 0.2s ease-in-out;
+const CardFooter = styled.div`
+  grid-area: footer;
+  display: flex;
+  justify-content: stretch;
+`;
 
-  ${CardLink}:hover & {
+const EventLink = styled.a`
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+`;
+
+const Title = styled.h4`
+  margin: 0 auto;
+  color: var(--gt-color-navy);
+  font-family: var(--gt-font-family-title);
+  transition: all 0.2s ease-in-out;
+
+  ${EventLink}:hover {
     color: var(--gt-color-blue);
     text-decoration: underline;
+  }
 `;
 
 const StartDate = styled.p`
@@ -55,10 +73,6 @@ const StartDate = styled.p`
   color: var(--gt-color-dark-gold);
   font-weight: 600;
   transition: color 0.2s ease-in-out;
-
-  ${CardLink}:hover & {
-    color: var(--gt-color-gold);
-  }
 `;
 
 const Description = styled.p`
@@ -66,8 +80,30 @@ const Description = styled.p`
   margin: 1rem 0;
 `;
 
-const Button = styled(AddToCalendar)`
-  flex: 0 0 auto;
+const footerButtonCSS = css`
+  flex: 1 1 50%;
+  border-radius: 0;
+  box-shadow: none;
+  width: 50%;
+`;
+
+const CalButton = styled(AddToCalendar)`
+  ${footerButtonCSS}
+  border-bottom-left-radius: 0.5rem;
+
+  ${media.md} {
+    border-bottom-left-radius: 0;
+  }
+`;
+
+const InfoButton = styled(Button)`
+  ${footerButtonCSS}
+  border-bottom-right-radius: 0.5rem;
+
+  &: hover {
+    color: var(--gt-color-blue);
+    border-color: var(--gt-color-blue);
+  }
 `;
 
 const getEventUrl = (startDate, slug) => {
@@ -88,70 +124,88 @@ export function EventCard({
   className,
 }) {
   const date = parseISO(startDate);
-  const formattedDate = format(date, 'MMMM d, yyyy');
-  const formattedTime = format(date, 'h:mm a');
 
   const calStartDate = format(date, 'yyyy-MM-dd');
   const calStartTime = format(date, 'HH:mm');
   const calEndDate = endDate ? format(parseISO(endDate), 'yyyy-MM-dd') : null;
   const calEndTime = endDate ? format(parseISO(endDate), 'HH:mm') : null;
+  const displayDate = format(date, 'MMM. do @ h:mm a');
 
   const url = getEventUrl(startDate, slug);
   const locationStr = getLocationString(location.name, location.address);
 
   return (
     <Card className={className} data-testid="event-card">
-      <Link href={url} passHref>
-        <CardLink href={url}>
-          {image && (
-            <ImageFrame>
-              <Image src={image} alt={title} layout="fill" />
-            </ImageFrame>
-          )}
-          <CardContent>
-            <Title>{title}</Title>
-            <StartDate>
-              {formattedDate} @ {formattedTime}
-            </StartDate>
-            <Description>{description}</Description>
-          </CardContent>
-        </CardLink>
-      </Link>
-      <Button
-        name={title}
-        startDate={calStartDate}
-        startTime={calStartTime}
-        endDate={calEndDate}
-        endTime={calEndTime}
-        description={description}
-        location={locationStr}
-      />
+      {image && (
+        <CardMedia>
+          <Image src={image} alt={title} layout="fill" />
+        </CardMedia>
+      )}
+      <CardContent>
+        <StartDate>{displayDate}</StartDate>
+        <Title>
+          <Link passHref href={url}>
+            <EventLink href={url}>{title}</EventLink>
+          </Link>
+        </Title>
+        <Description>{description}</Description>
+      </CardContent>
+      <CardFooter>
+        <CalButton
+          name={title}
+          startDate={calStartDate}
+          startTime={calStartTime}
+          endDate={calEndDate}
+          endTime={calEndTime}
+          description={description}
+          location={locationStr}
+        />
+        <Link href={url} passHref>
+          <InfoButton as="a" href={url} passHref variant="secondary">
+            Learn More
+          </InfoButton>
+        </Link>
+      </CardFooter>
     </Card>
   );
 }
 
 EventCard.propTypes = {
-  title: PropType.string.isRequired,
-  startDate: PropType.string.isRequired,
-  description: PropType.string.isRequired,
-  image: PropType.string.isRequired,
+  title: PropType.string,
+  startDate: PropType.string,
+  description: PropType.string,
+  image: PropType.string,
   location: PropType.shape({
-    name: PropType.string.isRequired,
+    name: PropType.string,
     address: PropType.shape({
-      street: PropType.string.isRequired,
+      street: PropType.string,
       street2: PropType.string,
-      city: PropType.string.isRequired,
-      state: PropType.string.isRequired,
-      zip: PropType.string.isRequired,
-    }).isRequired,
-  }).isRequired,
+      city: PropType.string,
+      state: PropType.string,
+      zip: PropType.string,
+    }),
+  }),
   endDate: PropType.string,
   slug: PropType.string.isRequired,
   className: PropType.string,
 };
 
 EventCard.defaultProps = {
-  endDate: null,
+  title: '',
+  startDate: '',
+  description: '',
+  image: '',
+  location: {
+    name: '',
+    address: {
+      street: '',
+      street2: '',
+      city: '',
+      state: '',
+      zip: '',
+    },
+  },
+  endDate: '',
   className: '',
 };
 

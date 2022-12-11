@@ -25,7 +25,7 @@ const imageHost = getHost();
 export default function Event({ event, month }) {
   const router = useRouter();
 
-  const { title, content, startDate, shortDescription, image, location, endDate } = event;
+  const { title, content, startDate, description, image, location, endDate } = event;
 
   const parsedStartDate = parseISO(startDate);
   const parsedEndDate = parseISO(endDate);
@@ -51,7 +51,7 @@ export default function Event({ event, month }) {
       <Section maxWidth={800}>
         <Head
           title={seoTitle}
-          description={shortDescription}
+          description={description}
           image={{
             src: imageUrl,
             alt: title,
@@ -64,7 +64,7 @@ export default function Event({ event, month }) {
         <ButtonWrapper>
           <AddToCalendar
             name={title}
-            description={shortDescription}
+            description={description}
             startDate={calStartDate}
             startTime={calStartTime}
             endDate={calEndDate}
@@ -87,7 +87,7 @@ Event.propTypes = {
     content: PropTypes.string,
     startDate: PropTypes.string,
     endDate: PropTypes.string,
-    shortDescription: PropTypes.string,
+    description: PropTypes.string,
     image: PropTypes.string,
     location: PropTypes.shape(LocationCard.propTypes),
   }).isRequired,
@@ -104,7 +104,7 @@ export async function getStaticProps({ params }) {
     'slug',
     'content',
     'image',
-    'shortDescription',
+    'description',
   ]);
 
   const content = await markdownToHtml(event.content || '');
