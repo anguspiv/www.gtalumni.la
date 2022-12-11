@@ -102,6 +102,14 @@ export const getAllEvents = (fields = []) => {
   return events;
 };
 
+export const getEventsByMonth = (params, fields = []) => {
+  const slugs = getEventSlugsByMonth(params);
+
+  const events = slugs.map((slug) => getEventByDateAndSlug(params, slug, fields));
+
+  return events;
+};
+
 export default {
   getEventByDateAndSlug,
   getEventSlugsByMonth,
