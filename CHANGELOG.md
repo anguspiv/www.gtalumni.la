@@ -1,3 +1,10 @@
+# [1.20.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.19.0...v1.20.0) (2022-12-11)
+
+
+### Features
+
+* adds event year page ([dfd9e63](https://github.com/anguspiv/www.gtalumni.la/commit/dfd9e63dbf38752528526906ef23733f4eb172fd)), closes [#111](https://github.com/anguspiv/www.gtalumni.la/issues/111)
+
 # [1.19.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.18.0...v1.19.0) (2022-12-11)
 
 
