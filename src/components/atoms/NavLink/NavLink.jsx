@@ -7,7 +7,6 @@ const styles = css`
   background-color: var(--gt-color-white);
   text-decoration: none;
   display: inline-block;
-  font-size: 0.9rem;
   transition: var(--gt-transition-base);
   line-height: 1;
   padding: 0.25rem 0.5rem;

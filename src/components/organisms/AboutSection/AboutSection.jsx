@@ -12,9 +12,9 @@ export function AboutSection() {
         of Georgia Tech in the area, and not just for football games!
       </Typography>
       <Typography variant="body1">
-        Due to how large the Los Angeles area is and the diversity of our GT community, we don&amp;t
-        traditionally have assigned officers or set events. Instead, we rely on our members to help
-        organize events and activities that they are interested in. We also have a{' '}
+        Due to how large the Los Angeles area is and the diversity of our GT community, we
+        don&apos;t traditionally have assigned officers or set events. Instead, we rely on our
+        members to help organize events and activities that they are interested in. We also have a{' '}
         <a href="https://www.facebook.com/groups/39515948772/">Facebook group</a> that is used to
         help coordinate events and activities.
       </Typography>

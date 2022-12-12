@@ -14,11 +14,9 @@ describe('<NavLink />', () => {
       color: var(--gt-color-dark-gold);
       text-decoration: none;
       display: inline-block;
-      font-weight: 600;
-      font-size: 0.9rem;
       transition: var(--gt-transition-base);
       line-height: 1;
-      padding: 0.5rem;
+      padding: 0.25rem 0.5rem;
     `);
   });
 });
