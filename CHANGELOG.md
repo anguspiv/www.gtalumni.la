@@ -1,3 +1,10 @@
+# [1.21.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.20.0...v1.21.0) (2022-12-12)
+
+
+### Features
+
+* adds the events index page ([189457c](https://github.com/anguspiv/www.gtalumni.la/commit/189457c3783241181dbfbc238b2024262e40d4f6)), closes [#111](https://github.com/anguspiv/www.gtalumni.la/issues/111)
+
 # [1.20.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.19.0...v1.20.0) (2022-12-11)
 
 
