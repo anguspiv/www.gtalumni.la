@@ -1,3 +1,11 @@
+# [1.22.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.21.0...v1.22.0) (2022-12-12)
+
+
+### Features
+
+* adds site nav component ([5e8224c](https://github.com/anguspiv/www.gtalumni.la/commit/5e8224cf5e0788d4414ffde410baecdfceca3229)), closes [#47](https://github.com/anguspiv/www.gtalumni.la/issues/47)
+* adds the site navigation to all pages ([374896e](https://github.com/anguspiv/www.gtalumni.la/commit/374896e838e85a9917d3a4983015f94a20227a9c)), closes [#47](https://github.com/anguspiv/www.gtalumni.la/issues/47)
+
 # [1.21.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.20.0...v1.21.0) (2022-12-12)
 
 
