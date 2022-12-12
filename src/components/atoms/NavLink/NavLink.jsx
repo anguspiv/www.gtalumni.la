@@ -4,13 +4,17 @@ import { css } from '@emotion/react';
 
 const styles = css`
   color: var(--gt-color-dark-gold);
+  background-color: var(--gt-color-white);
   text-decoration: none;
   display: inline-block;
-  font-weight: 600;
   font-size: 0.9rem;
   transition: var(--gt-transition-base);
   line-height: 1;
-  padding: 0.5rem;
+  padding: 0.25rem 0.5rem;
+
+  &:hover {
+    color: var(--gt-color-light-black);
+  }
 `;
 
 export function NavLink({ href, children, ...props }) {
