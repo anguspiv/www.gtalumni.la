@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
+import Link from 'next/link';
 import { EventCard } from '@components/molecules/EventCard';
 
 const Title = styled.h2`
@@ -31,10 +32,27 @@ const Card = styled(EventCard)`
   height: 100%;
 `;
 
-export function EventList({ title, events }) {
+const TitleLink = styled.a`
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    color: var(--gt-color-blue);
+    text-decoration: underline;
+`;
+
+export function EventList({ title, events, href }) {
   return (
     <Wrapper>
-      {title && <Title>{title}</Title>}
+      {title && !href && <Title>{title}</Title>}
+      {title && href && (
+        <Title>
+          <Link href={href} passHref>
+            <TitleLink href={href}>{title}</TitleLink>
+          </Link>
+        </Title>
+      )}
       {events?.length === 0 && <NoResults>No events found.</NoResults>}
       {events?.length && (
         <List>
@@ -61,11 +79,13 @@ export function EventList({ title, events }) {
 
 EventList.propTypes = {
   events: PropTypes.arrayOf(PropTypes.shape(EventCard.propTypes)),
+  href: PropTypes.string,
   title: PropTypes.string,
 };
 
 EventList.defaultProps = {
   events: [],
+  href: '',
   title: '',
 };
 

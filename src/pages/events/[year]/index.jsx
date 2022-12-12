@@ -14,13 +14,17 @@ export default function EventYear({ events, year }) {
 
   const sortedEvents = events.reduce((acc, event) => {
     const { startDate } = event;
-    const month = format(parseISO(startDate), 'MMMM');
+    const month = format(parseISO(startDate), 'MM');
+    const monthName = format(parseISO(startDate), 'MMMM');
 
     if (!acc[month]) {
-      acc[month] = [];
+      acc[month] = {
+        title: monthName,
+        events: [],
+      };
     }
 
-    acc[month].push(event);
+    acc[month].events.push(event);
 
     return acc;
   }, {});
@@ -32,9 +36,18 @@ export default function EventYear({ events, year }) {
         <PageHeader title={title} location={router} labels={{ [year]: year }} />
       </Section>
       <Section maxWidth={800}>
-        {Object.entries(sortedEvents).map(([month, evts]) => (
-          <EventList key={month} events={evts} title={month} />
-        ))}
+        {Object.entries(sortedEvents).map(([month, monthData]) => {
+          const { title: monthTitle, events: evts } = monthData;
+
+          return (
+            <EventList
+              key={month}
+              events={evts}
+              title={monthTitle}
+              href={`/events/${year}/${month}`}
+            />
+          );
+        })}
       </Section>
     </>
   );
