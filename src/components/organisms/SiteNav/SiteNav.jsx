@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import { css } from '@emotion/react';
 import { NavLink } from '@components/atoms/NavLink';
-import { Container } from '@components/atoms/Container';
+import { Section } from '@components/atoms/Section';
 
 const Nav = styled.nav`
   display: flex;
@@ -35,10 +35,10 @@ const Link = styled(NavLink)``;
 
 export function SiteNav({ className }) {
   return (
-    <Container
+    <Section
+      maxWidth={600}
       css={css`
         padding: 0 0.5rem;
-        max-width: 800px;
       `}
     >
       <Nav className={className}>
@@ -48,7 +48,7 @@ export function SiteNav({ className }) {
           </li>
         </List>
       </Nav>
-    </Container>
+    </Section>
   );
 }
 
