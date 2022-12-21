@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { SiteHeader } from '@components/organisms/SiteHeader';
 import { SiteNav } from '@components/organisms/SiteNav';
+import { SiteFooter } from '@components/organisms/SiteFooter';
 
 export function Page({ children }) {
   return (
@@ -8,6 +9,7 @@ export function Page({ children }) {
       <SiteHeader />
       <SiteNav />
       <main>{children}</main>
+      <SiteFooter />
     </div>
   );
 }
