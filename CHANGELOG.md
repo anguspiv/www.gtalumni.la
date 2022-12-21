@@ -1,3 +1,14 @@
+# [1.23.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.22.0...v1.23.0) (2022-12-21)
+
+
+### Features
+
+* adds site footer to all pages ([e0fdabe](https://github.com/anguspiv/www.gtalumni.la/commit/e0fdabe9122c23158ed51a9613f18065c24a155f)), closes [#49](https://github.com/anguspiv/www.gtalumni.la/issues/49)
+* adds the footer menu components ([ae7aacd](https://github.com/anguspiv/www.gtalumni.la/commit/ae7aacd9d415608018b40989c7ddaea89a658fbe)), closes [#49](https://github.com/anguspiv/www.gtalumni.la/issues/49)
+* adds the site footer components ([377eb55](https://github.com/anguspiv/www.gtalumni.la/commit/377eb5545128b924b68dbf7932a4445bd6c2f489)), closes [#49](https://github.com/anguspiv/www.gtalumni.la/issues/49)
+* **section:** fixes variant colors and adds as prop ([976163b](https://github.com/anguspiv/www.gtalumni.la/commit/976163b64027823b42127e1607a89fb14c8489aa)), closes [#49](https://github.com/anguspiv/www.gtalumni.la/issues/49)
+* **site-nav:** updates styles to be full width ([1036c8d](https://github.com/anguspiv/www.gtalumni.la/commit/1036c8deea1ff6ad613af88db9824ebf1762a43e))
+
 # [1.22.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.21.0...v1.22.0) (2022-12-12)
 
 
