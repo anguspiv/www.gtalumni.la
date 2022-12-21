@@ -79,4 +79,12 @@ describe('<Section />', () => {
 
     expect(screen.getByTestId('section')).toHaveClass('foo');
   });
+
+  it('should render with a custom as prop', () => {
+    expect.assertions(1);
+
+    render(<Section as="footer" />);
+
+    expect(screen.getByTestId('section').tagName).toBe('FOOTER');
+  });
 });
