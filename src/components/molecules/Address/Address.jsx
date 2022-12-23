@@ -15,14 +15,14 @@ const Line = styled(Typography)`
   line-height: 1.5;
 `;
 
-export function Address({ title, address, href, className }) {
+export function Address({ name, address, href, className }) {
   const url = href || `https://www.google.com/maps/place/${getEncodedAddress(address)}`;
 
   return (
     <StyledAddress className={className} data-testid="address">
       <Line variant="h5">
         <Link href={url} target="_blank" rel="noopener noreferrer">
-          {title}
+          {name}
         </Link>
       </Line>
       <Line variant="body1">{address.street}</Line>
@@ -42,7 +42,7 @@ Address.propTypes = {
     state: PropTypes.string.isRequired,
     zip: PropTypes.string.isRequired,
   }).isRequired,
-  title: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
   href: PropTypes.string,
   className: PropTypes.string,
 };

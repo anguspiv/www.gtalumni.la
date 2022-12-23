@@ -24,18 +24,18 @@ const CardAddress = styled(Address)`
   margin-bottom: ${rem(8)};
 `;
 
-export function LocationCard({ title, address, href, className }) {
+export function LocationCard({ name, address, href, className }) {
   return (
     <Card className={className} data-testid="location-card">
-      <CardMap address={address} title={title} height={360} />
-      <CardAddress title={title} address={address} href={href} />
+      <CardMap address={address} name={name} height={360} />
+      <CardAddress name={name} address={address} href={href} />
       <DirectionsLink address={address} />
     </Card>
   );
 }
 
 LocationCard.propTypes = {
-  title: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
   address: PropTypes.shape({
     street: PropTypes.string.isRequired,
     street2: PropTypes.string,

@@ -2,7 +2,7 @@ import { getEncodedAddress, getLocationString } from './address';
 
 describe('getEncodedAddress', () => {
   it('should return an encoded address', () => {
-    expect.assertions(1);
+    expect.assertions(2);
 
     const address = {
       street: '123 Fake St',
@@ -15,6 +15,12 @@ describe('getEncodedAddress', () => {
     const expected = '123+Fake+St+Apt+456,+Springfield,+OR+12345';
 
     expect(getEncodedAddress(address)).toBe(expected);
+
+    const title = 'My Event';
+
+    const expectedWithTitle = 'My+Event+123+Fake+St+Apt+456,+Springfield,+OR+12345';
+
+    expect(getEncodedAddress(address, title)).toBe(expectedWithTitle);
   });
 });
 

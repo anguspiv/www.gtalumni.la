@@ -24,8 +24,8 @@ const IFrame = styled.iframe`
   bottom: 0;
 `;
 
-export function Map({ address, title, width, height, className }) {
-  const encodedAddress = getEncodedAddress(address);
+export function Map({ address, name, width, height, className }) {
+  const encodedAddress = getEncodedAddress(address, name);
   const mapUrl = `https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API}&q=${encodedAddress}`;
 
   let mapWidth = width;
@@ -42,7 +42,7 @@ export function Map({ address, title, width, height, className }) {
   return (
     <Wrapper data-testid="map" className={className}>
       <IFrame
-        title={`Map of ${title}`}
+        title={`Map of ${name}`}
         src={mapUrl}
         width={mapWidth}
         height={mapHeight}
@@ -65,7 +65,7 @@ Map.propTypes = {
     state: PropTypes.string.isRequired,
     zip: PropTypes.string.isRequired,
   }).isRequired,
-  title: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   className: PropTypes.string,

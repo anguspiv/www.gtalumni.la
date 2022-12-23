@@ -6,7 +6,7 @@ describe('<Address />', () => {
   it('should render a link to google maps', () => {
     expect.assertions(5);
 
-    const title = 'My Address';
+    const name = 'My Address';
     const address = {
       street: '123 Fake St',
       street2: 'Apt 456',
@@ -17,9 +17,9 @@ describe('<Address />', () => {
 
     const className = 'my-address';
 
-    render(<Address address={address} title={title} className={className} />);
+    render(<Address address={address} name={name} className={className} />);
 
-    expect(screen.getByText(title)).toHaveAttribute(
+    expect(screen.getByText(name)).toHaveAttribute(
       'href',
       `https://www.google.com/maps/place/${getEncodedAddress(address)}`,
     );
@@ -34,7 +34,7 @@ describe('<Address />', () => {
   it('should render a link to google maps without street2', () => {
     expect.assertions(3);
 
-    const title = 'My Address';
+    const name = 'My Address';
     const address = {
       street: '123 Fake St',
       city: 'Springfield',
@@ -42,9 +42,9 @@ describe('<Address />', () => {
       zip: '12345',
     };
 
-    render(<Address address={address} title={title} />);
+    render(<Address address={address} name={name} />);
 
-    expect(screen.getByText(title)).toHaveAttribute(
+    expect(screen.getByText(name)).toHaveAttribute(
       'href',
       `https://www.google.com/maps/place/${getEncodedAddress(address)}`,
     );
@@ -57,7 +57,7 @@ describe('<Address />', () => {
   it('should link to a set href', () => {
     expect.assertions(1);
 
-    const title = 'My Address';
+    const name = 'My Address';
     const address = {
       street: '123 Fake St',
       city: 'Springfield',
@@ -66,8 +66,8 @@ describe('<Address />', () => {
     };
     const href = 'https://www.gatech.edu';
 
-    render(<Address address={address} title={title} href={href} />);
+    render(<Address address={address} name={name} href={href} />);
 
-    expect(screen.getByText(title)).toHaveAttribute('href', href);
+    expect(screen.getByText(name)).toHaveAttribute('href', href);
   });
 });
