@@ -1,4 +1,4 @@
-export const getEncodedAddress = (address) => {
+export const getEncodedAddress = (address, name = '') => {
   const { street, street2, city, state, zip } = address;
   let str = `${street}`;
 
@@ -7,6 +7,10 @@ export const getEncodedAddress = (address) => {
   }
 
   str = `${str}, ${city}, ${state} ${zip}`;
+
+  if (name) {
+    str = `${name} ${str}`;
+  }
 
   return str.replaceAll(' ', '+');
 };

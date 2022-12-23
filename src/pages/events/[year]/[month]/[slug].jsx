@@ -44,7 +44,7 @@ export default function Event({ event, month }) {
   const seoTitle = `${title} - ${formattedDate}`;
   const imageUrl = `${imageHost}${image}`;
 
-  const locationString = getLocationString(location.title, location.address);
+  const locationString = getLocationString(location.name, location.address);
 
   return (
     <>
@@ -75,7 +75,7 @@ export default function Event({ event, month }) {
       </Section>
       <Section align="center" background="secondary" maxWidth={800}>
         <Typography variant="h2">Location</Typography>
-        <LocationCard address={location.address} title={location.title} href={location.href} />
+        <LocationCard address={location.address} name={location.name} href={location.href} />
       </Section>
     </>
   );
