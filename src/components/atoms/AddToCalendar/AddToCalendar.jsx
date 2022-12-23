@@ -11,7 +11,7 @@ const Icon = styled(FontAwesomeIcon)`
   margin-right: 0.5rem;
 `;
 
-export function AddToCalendar({ name, className, ...props }) {
+export function AddToCalendar({ name, className, variant, ...props }) {
   const onClick = () =>
     addEventToCalendar({
       name,
@@ -22,7 +22,7 @@ export function AddToCalendar({ name, className, ...props }) {
     });
 
   return (
-    <Button onClick={onClick} type="button" className={className}>
+    <Button onClick={onClick} type="button" className={className} variant={variant}>
       <Icon icon={faPlus} />
       Add To Calendar
     </Button>
@@ -36,6 +36,7 @@ AddToCalendar.propTypes = {
   startTime: PropTypes.string,
   endTime: PropTypes.string,
   className: PropTypes.string,
+  variant: Button.propTypes.variant,
 };
 
 AddToCalendar.defaultProps = {
@@ -44,6 +45,7 @@ AddToCalendar.defaultProps = {
   startTime: null,
   endTime: null,
   className: null,
+  variant: Button.defaultProps.variant,
 };
 
 export default AddToCalendar;

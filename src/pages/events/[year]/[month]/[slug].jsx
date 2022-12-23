@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { useRouter } from 'next/router';
 import { parseISO, format } from 'date-fns';
+import { rem } from 'polished';
 import styled from '@emotion/styled';
 import { getEventByDateAndSlug, getAllEvents } from '@lib/api';
 import { markdownToHtml } from '@lib/markdownToHtml';
@@ -13,11 +14,21 @@ import { LocationCard } from '@components/organisms/LocationCard';
 import { AddToCalendar } from '@components/atoms/AddToCalendar';
 import { getHost } from '@utils/env';
 import { getLocationString } from '@utils/address';
+import { Button } from '@components/atoms/Button';
 
 const ButtonWrapper = styled.div`
   display: flex;
   justify-content: center;
+  align-items: stretch;
+  align-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
   margin: 1rem 0;
+
+  & > * {
+    margin: 0 0.5rem 1rem;
+    max-width: ${rem(280)};
+  }
 `;
 
 const imageHost = getHost();
@@ -25,7 +36,7 @@ const imageHost = getHost();
 export default function Event({ event, month }) {
   const router = useRouter();
 
-  const { title, content, startDate, description, image, location, endDate } = event;
+  const { title, content, startDate, description, image, location, endDate, link } = event;
 
   const parsedStartDate = parseISO(startDate);
   const parsedEndDate = parseISO(endDate);
@@ -46,6 +57,8 @@ export default function Event({ event, month }) {
 
   const locationString = getLocationString(location.name, location.address);
 
+  const hasLink = !!link && !!link?.href;
+
   return (
     <>
       <Section maxWidth={800}>
@@ -62,6 +75,11 @@ export default function Event({ event, month }) {
         {/* eslint-disable-next-line react/no-danger */}
         <article dangerouslySetInnerHTML={{ __html: content }} />
         <ButtonWrapper>
+          {hasLink && (
+            <Button as="a" href={link?.href} target="_blank" rel="noopener noreferrer">
+              {link?.label || 'More Info'}
+            </Button>
+          )}
           <AddToCalendar
             name={title}
             description={description}
@@ -70,6 +88,7 @@ export default function Event({ event, month }) {
             endDate={calEndDate}
             endTime={calEndTime}
             location={locationString}
+            variant={hasLink ? 'secondary' : 'primary'}
           />
         </ButtonWrapper>
       </Section>
@@ -90,6 +109,10 @@ Event.propTypes = {
     description: PropTypes.string,
     image: PropTypes.string,
     location: PropTypes.shape(LocationCard.propTypes),
+    link: PropTypes.shape({
+      href: PropTypes.string,
+      label: PropTypes.string,
+    }),
   }).isRequired,
   month: PropTypes.string.isRequired,
 };
@@ -105,6 +128,7 @@ export async function getStaticProps({ params }) {
     'content',
     'image',
     'description',
+    'link',
   ]);
 
   const content = await markdownToHtml(event.content || '');
