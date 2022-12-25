@@ -37,8 +37,6 @@ export default function Events({ events }) {
       <Head title={title} description="Alumni Events" />
       <Section maxWidth={800}>
         <PageHeader title={title} location={router} />
-      </Section>
-      <Section maxWidth={800}>
         {Object.entries(sortedEvents).map(([key, monthData]) => {
           const { events: evts, month, year } = monthData;
 

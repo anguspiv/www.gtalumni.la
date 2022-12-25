@@ -85,6 +85,7 @@ export const globalStyles = css`
       font-family: var(--gt-font-family-subtitle);
       font-weight: 600;
       line-height: 1.2;
+      margin-top: 1rem;
       margin-bottom: 0.5rem;
       color: var(--gt-color-text-title);
     }

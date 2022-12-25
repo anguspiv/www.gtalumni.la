@@ -15,7 +15,7 @@ const Subtitle = styled(Typography)`
 `;
 
 const Header = styled.header`
-  margin: 1.5rem auto 1rem;
+  margin: 0 auto 1rem;
 `;
 
 const Crumbs = styled(BreadCrumbs)`
