@@ -12,7 +12,6 @@ import { Image } from '@components/atoms/Image';
 import { Typography } from '@components/atoms/Typography';
 import { LocationCard } from '@components/organisms/LocationCard';
 import { AddToCalendar } from '@components/atoms/AddToCalendar';
-import { getHost } from '@utils/env';
 import { getLocationString } from '@utils/address';
 import { Button } from '@components/atoms/Button';
 
@@ -30,8 +29,6 @@ const ButtonWrapper = styled.div`
     max-width: ${rem(280)};
   }
 `;
-
-const imageHost = getHost();
 
 export default function Event({ event, month }) {
   const router = useRouter();
@@ -53,7 +50,7 @@ export default function Event({ event, month }) {
   labels[month] = formattedMonth;
 
   const seoTitle = `${title} - ${formattedDate}`;
-  const imageUrl = `${imageHost}${image}`;
+  const imageUrl = `${image}`;
 
   const locationString = getLocationString(location.name, location.address);
 
