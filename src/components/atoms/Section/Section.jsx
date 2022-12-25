@@ -47,7 +47,7 @@ export function Section({ align, as, className, children, maxWidth, background }
         color: ${color};
         text-align: ${align};
         padding-top: 1rem;
-        padding-bottom: 1rem;
+        padding-bottom: 2rem;
       `}
     >
       <Container
