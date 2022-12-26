@@ -35,7 +35,7 @@
     "next": "12.2.5",
     "polished": "^4.2.2",
     "prop-types": "^15.8.1",
-    "radash": "^7.1.0",
+    "radash": "^10.3.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "rehype-autolink-headings": "^6.1.1",
