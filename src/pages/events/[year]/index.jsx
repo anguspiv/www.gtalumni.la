@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { unique } from 'radash';
 import { useRouter } from 'next/router';
-import { parseISO, format } from 'date-fns';
+import { formatInTimeZone } from 'date-fns-tz';
 import { getEventsByYear, getAllEvents } from '@lib/api';
 import { EventList } from '@components/organisms/EventList';
 import { PageHeader } from '@components/molecules/PageHeader';
@@ -14,8 +14,11 @@ export default function EventYear({ events, year }) {
 
   const sortedEvents = events.reduce((acc, event) => {
     const { startDate } = event;
-    const month = format(parseISO(startDate), 'MM');
-    const monthName = format(parseISO(startDate), 'MMMM');
+
+    const currDate = new Date(startDate);
+
+    const month = formatInTimeZone(currDate, 'America/Los_Angeles', 'MM');
+    const monthName = formatInTimeZone(currDate, 'America/Los_Angeles', 'MMMM');
 
     if (!acc[month]) {
       acc[month] = {

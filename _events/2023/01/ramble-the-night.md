@@ -1,7 +1,7 @@
 ---
 title: 'Ramble The Night'
-startDate: '2023-01-26T18:00:00-05:00'
-endDate: '2023-01-26T20:00:00-05:00'
+startDate: 'January 26, 2023 6:00 PM PST'
+endDate: 'January 26, 2023 8:00 PM PST'
 description: "Connect with Jackets and celebrate Tech's spirit in your community
 at Ramble the Night"
 image: /img/events/2023/01/ramble-the-night.jpg

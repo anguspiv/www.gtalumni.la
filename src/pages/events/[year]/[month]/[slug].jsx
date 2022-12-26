@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { useRouter } from 'next/router';
-import { parseISO, format } from 'date-fns';
+import { formatInTimeZone } from 'date-fns-tz';
 import { rem } from 'polished';
 import styled from '@emotion/styled';
 import { getEventByDateAndSlug, getAllEvents } from '@lib/api';
@@ -35,16 +35,23 @@ export default function Event({ event, month }) {
 
   const { title, content, startDate, description, image, location, endDate, link } = event;
 
-  const parsedStartDate = parseISO(startDate);
-  const parsedEndDate = parseISO(endDate);
+  const parsedStartDate = new Date(startDate);
+  const parsedEndDate = new Date(endDate);
 
-  const formattedDate = format(parsedStartDate, 'MMMM d, yyyy @ h:mm a');
-  const formattedMonth = format(parsedStartDate, 'MMMM');
+  const formattedDate = formatInTimeZone(
+    parsedStartDate,
+    'America/Los_Angeles',
+    'MMMM d, yyyy @ h:mm a',
+    {
+      timeZone: 'America/Los_Angeles',
+    },
+  );
+  const formattedMonth = formatInTimeZone(parsedStartDate, 'America/Los_Angeles', 'MMMM');
 
-  const calStartDate = format(parsedStartDate, 'yyyy-MM-dd');
-  const calEndDate = format(parsedEndDate, 'yyyy-MM-dd');
-  const calStartTime = format(parsedStartDate, 'HH:mm');
-  const calEndTime = format(parsedEndDate, 'HH:mm');
+  const calStartDate = formatInTimeZone(parsedStartDate, 'America/Los_Angeles', 'yyyy-MM-dd');
+  const calEndDate = formatInTimeZone(parsedEndDate, 'America/Los_Angeles', 'yyyy-MM-dd');
+  const calStartTime = formatInTimeZone(parsedStartDate, 'America/Los_Angeles', 'HH:mm');
+  const calEndTime = formatInTimeZone(parsedEndDate, 'America/Los_Angeles', 'HH:mm');
 
   const labels = {};
   labels[month] = formattedMonth;

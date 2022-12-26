@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { unique } from 'radash';
-import { parseISO, format } from 'date-fns';
+import { parseISO } from 'date-fns';
+import { formatInTimeZone } from 'date-fns-tz';
 import { useRouter } from 'next/router';
 import { getEventsByMonth, getAllEvents } from '@lib/api';
 import { EventList } from '@components/organisms/EventList';
@@ -11,7 +12,7 @@ import { Head } from '@components/organisms/Head';
 export default function EventMonth({ events, month, year }) {
   const router = useRouter();
   const date = parseISO(`${year}-${month}-01`);
-  const monthStr = format(date, 'MMMM');
+  const monthStr = formatInTimeZone(date, 'America/Los_Angeles', 'MMMM');
 
   const title = `Events - ${monthStr} ${year}`;
 
