@@ -1,5 +1,5 @@
 import PropType from 'prop-types';
-import { parseISO, format } from 'date-fns';
+import { formatInTimeZone } from 'date-fns-tz';
 import Image from 'next/image';
 import Link from 'next/link';
 import styled from '@emotion/styled';
@@ -107,8 +107,8 @@ const InfoButton = styled(Button)`
 `;
 
 const getEventUrl = (startDate, slug) => {
-  const date = parseISO(startDate);
-  const formattedDate = format(date, 'yyyy/MM');
+  const date = new Date(startDate);
+  const formattedDate = formatInTimeZone(date, 'America/Los_Angeles', 'yyyy/MM');
 
   return `/events/${formattedDate}/${slug}`;
 };
@@ -123,13 +123,17 @@ export function EventCard({
   slug,
   className,
 }) {
-  const date = parseISO(startDate);
+  const parsedStart = new Date(startDate);
+  const parsedEnd = new Date(endDate);
 
-  const calStartDate = format(date, 'yyyy-MM-dd');
-  const calStartTime = format(date, 'HH:mm');
-  const calEndDate = endDate ? format(parseISO(endDate), 'yyyy-MM-dd') : null;
-  const calEndTime = endDate ? format(parseISO(endDate), 'HH:mm') : null;
-  const displayDate = format(date, 'MMM. do @ h:mm a');
+  const calStartDate = formatInTimeZone(parsedStart, 'America/Los_Angeles', 'yyyy-MM-dd');
+  const calStartTime = formatInTimeZone(parsedStart, 'America/Los_Angeles', 'HH:mm');
+  const calEndDate = endDate
+    ? formatInTimeZone(parsedEnd, 'America/Los_Angeles', 'yyyy-MM-dd')
+    : null;
+  const calEndTime = endDate ? formatInTimeZone(parsedEnd, 'America/Los_Angeles', 'HH:mm') : null;
+
+  const displayDate = formatInTimeZone(parsedStart, 'America/Los_Angeles', 'MMM. do @ h:mm a');
 
   const url = getEventUrl(startDate, slug);
   const locationStr = getLocationString(location.name, location.address);

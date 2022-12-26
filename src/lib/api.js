@@ -1,5 +1,4 @@
 const matter = require('gray-matter');
-const { parseISO, format } = require('date-fns');
 const fs = require('fs');
 const path = require('path');
 
@@ -28,8 +27,7 @@ export const getEventByDateAndSlug = ({ year, month }, slug, fields = []) => {
     }
 
     if (field === 'date') {
-      const startDate = parseISO(data.startDate);
-      items[field] = format(startDate, 'yyyy-MM-dd');
+      items[field] = data.startDate;
     }
 
     if (field === 'year') {

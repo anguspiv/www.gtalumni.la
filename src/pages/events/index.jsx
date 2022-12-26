@@ -1,6 +1,6 @@
 import { sort } from 'radash';
 import { useRouter } from 'next/router';
-import { parseISO, format } from 'date-fns';
+import { formatInTimeZone } from 'date-fns-tz';
 import { getAllEvents } from '@lib/api';
 import { EventList } from '@components/organisms/EventList';
 import { PageHeader } from '@components/molecules/PageHeader';
@@ -13,9 +13,12 @@ export default function Events({ events }) {
 
   const sortedEvents = events.reduce((acc, event) => {
     const { startDate } = event;
-    const monthLabel = format(parseISO(startDate), 'MMMM');
-    const year = format(parseISO(startDate), 'yyyy');
-    const month = format(parseISO(startDate), 'MM');
+
+    const currDate = new Date(startDate);
+
+    const monthLabel = formatInTimeZone(currDate, 'America/Los_Angeles', 'MMMM');
+    const year = formatInTimeZone(currDate, 'America/Los_Angeles', 'yyyy');
+    const month = formatInTimeZone(currDate, 'America/Los_Angeles', 'MM');
 
     const listTitle = `${monthLabel} ${year}`;
 
@@ -69,7 +72,7 @@ export async function getStaticProps() {
     'description',
   ]);
 
-  events = sort(events, ({ startDate }) => parseISO(startDate), 'desc');
+  events = sort(events, ({ startDate }) => new Date(startDate), 'desc');
 
   return {
     props: {

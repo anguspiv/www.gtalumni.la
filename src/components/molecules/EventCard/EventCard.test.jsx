@@ -14,7 +14,7 @@ describe('<EventCard />', () => {
       <EventCard
         title="Example Event"
         slug="example-event"
-        startDate="2021-01-01T12:00:00"
+        startDate="January 1, 2021 12:00 PM PST"
         description="This is an example event."
         image="https://picsum.photos/200/300"
         className="example-class"
@@ -51,7 +51,7 @@ describe('<EventCard />', () => {
       <EventCard
         title="Example Event"
         slug="example-event"
-        startDate="2021-01-01T12:00:00"
+        startDate="January 1, 2021 12:00 PM PST"
         description="This is an example event."
         location={{
           name: 'Example Location',
@@ -76,8 +76,8 @@ describe('<EventCard />', () => {
       <EventCard
         title="Example Event"
         slug="example-event"
-        startDate="2021-01-01T12:00:00"
-        endDate="2021-01-01T13:00:00"
+        startDate="January 1, 2021 12:00 PM PST"
+        endDate="January 1, 2021 1:00 PM PST"
         description="This is an example event."
         location={{
           name: 'Example Location',
