@@ -1,3 +1,19 @@
+# [1.24.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.23.0...v1.24.0) (2023-01-04)
+
+
+### Bug Fixes
+
+* **events:** displays location name on events pages ([fab0dff](https://github.com/anguspiv/www.gtalumni.la/commit/fab0dffe04c3e5475111eb482bccd25abd32496c))
+* **events:** formats event dates in the right timezone ([995cdb9](https://github.com/anguspiv/www.gtalumni.la/commit/995cdb94496945b72afff298aa5fa02507fbf4d1))
+* removes host from event image src ([820bece](https://github.com/anguspiv/www.gtalumni.la/commit/820becee520e8f427f92ab6137b5b46ad8afd878))
+
+
+### Features
+
+* **events:** adds optional link button to page ([0a8e438](https://github.com/anguspiv/www.gtalumni.la/commit/0a8e438501b4de02f18533c5d8ca75823a77b5f4))
+* **events:** adds the ramble the night event ([8e50650](https://github.com/anguspiv/www.gtalumni.la/commit/8e50650bed6fdc055b0afa567a7f20213c7951c6)), closes [#141](https://github.com/anguspiv/www.gtalumni.la/issues/141)
+* updates event page styles ([a1f5ddf](https://github.com/anguspiv/www.gtalumni.la/commit/a1f5ddf0033f9a501c453acebf27f389435f9d17))
+
 # [1.23.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.22.0...v1.23.0) (2022-12-21)
 
 
