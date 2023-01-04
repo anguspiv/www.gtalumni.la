@@ -166,7 +166,7 @@ export function EventCard({
           location={locationStr}
         />
         <Link href={url} passHref>
-          <InfoButton as="a" href={url} passHref variant="secondary">
+          <InfoButton as="a" href={url} variant="secondary">
             Learn More
           </InfoButton>
         </Link>
