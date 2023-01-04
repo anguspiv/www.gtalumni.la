@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import { UpcomingEvents } from './UpcomingEvents';
 
 describe('<UpcomingEvents />', () => {
-  jest.useFakeTimers().setSystemTime(new Date('2020-01-02'));
+  jest.useFakeTimers().setSystemTime(new Date('January 2, 2020 12:00 PM EST'));
 
   const events = [
     {
@@ -106,8 +106,8 @@ describe('<UpcomingEvents />', () => {
     expect(screen.getByText('Upcoming Events')).toBeInTheDocument();
     expect(screen.getByTestId('section')).toHaveClass('test-class');
 
-    expect(screen.getAllByTestId('event-card')).toHaveLength(4);
-    expect(screen.getByText('Test Event')).toBeInTheDocument();
+    expect(screen.getAllByTestId('event-card')).toHaveLength(3);
+    expect(screen.queryByTestId('Test Event')).not.toBeInTheDocument();
     expect(screen.getByText('Test Event 2')).toBeInTheDocument();
     expect(screen.getByText('Test Event 3')).toBeInTheDocument();
     expect(screen.getByText('Test Event 4')).toBeInTheDocument();

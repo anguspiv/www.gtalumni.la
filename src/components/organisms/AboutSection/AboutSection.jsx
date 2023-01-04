@@ -4,7 +4,7 @@ import { Typography } from '@components/atoms/Typography';
 
 export function AboutSection() {
   return (
-    <Section maxWidth={600} align="center">
+    <Section maxWidth={600} align="center" background="secondary" id="about">
       <Typography variant="h2">About Us</Typography>
       <Typography variant="body1">
         We are a group of alumni and friends of Georgia Tech who live in the Los Angeles

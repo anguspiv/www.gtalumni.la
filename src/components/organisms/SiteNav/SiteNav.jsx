@@ -46,6 +46,12 @@ export function SiteNav({ className }) {
           <li>
             <Link href="/events">Events</Link>
           </li>
+          <li>
+            <Link href="/#about">About</Link>
+          </li>
+          <li>
+            <Link href="/#contact">Contact Us</Link>
+          </li>
         </List>
       </Nav>
     </Section>

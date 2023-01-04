@@ -1,6 +1,8 @@
 const matter = require('gray-matter');
+const { startOfToday } = require('date-fns');
 const fs = require('fs');
 const path = require('path');
+const { filterEventsByDate, sortEvents } = require('../utils/events');
 
 const eventsDir = path.join(process.cwd(), '_events');
 
@@ -122,6 +124,20 @@ export const getEventsByYear = (params, fields = []) => {
   }, []);
 
   return events;
+};
+
+export const getFutureEvents = (fields = []) => {
+  const events = getAllEvents(fields);
+
+  const startDate = startOfToday();
+
+  const futureEvents = sortEvents(
+    filterEventsByDate(events, {
+      startDate,
+    }),
+  );
+
+  return futureEvents;
 };
 
 export default {

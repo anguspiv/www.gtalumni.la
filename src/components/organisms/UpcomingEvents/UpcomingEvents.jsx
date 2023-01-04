@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 import { Section } from '@components/atoms/Section';
 import { EventList } from '@components/organisms/EventList';
-import { filterUpcomingEvents, sortEvents } from '@utils/events';
+import { filterUpcomingEvents } from '@utils/events';
 
 export function UpcomingEvents({ className, events, background }) {
-  const upcomingEvents = sortEvents(filterUpcomingEvents(events));
+  const upcomingEvents = filterUpcomingEvents(events);
 
   return (
     <Section className={className} maxWidth={800} background={background}>

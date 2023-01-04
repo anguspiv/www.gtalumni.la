@@ -1,4 +1,3 @@
-import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
@@ -28,17 +27,22 @@ const ContactLink = styled.a`
   display: inline-flex;
   align-items: center;
   width: auto;
+  color: var(--gt-color-text-alt-link);
+
+  &:visited {
+    color: var(--gt-color-text-alt-link-visited);
+  }
 `;
 
 const ContactIcon = styled(FontAwesomeIcon)`
-  color: var(--gt-color-text-primary);
+  color: var(--gt-color-text-alt-secondary);
   margin-right: 0.5rem;
   font-size: 1.5em;
 `;
 
 export function ContactSection() {
   return (
-    <Section align="center" background="secondary" maxWidth={600}>
+    <Section align="center" background="alt-secondary" maxWidth={600} id="contact">
       <Typography variant="h2">Contact Us</Typography>
 
       <Typography variant="body1">
@@ -54,12 +58,7 @@ export function ContactSection() {
               target="_blank"
               rel="noreferrer"
             >
-              <ContactIcon
-                css={css`
-                  color: var(--gt-color-social-facebook);
-                `}
-                icon={faFacebook}
-              />
+              <ContactIcon icon={faFacebook} />
               Facebook Group
             </ContactLink>
           </ContactItem>
@@ -75,12 +74,7 @@ export function ContactSection() {
               target="_blank"
               rel="noreferrer"
             >
-              <ContactIcon
-                css={css`
-                  color: var(--gt-color-social-github);
-                `}
-                icon={faGithub}
-              />
+              <ContactIcon icon={faGithub} />
               GitHub Discussions
             </ContactLink>
           </ContactItem>

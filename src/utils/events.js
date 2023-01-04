@@ -1,18 +1,28 @@
-import { startOfDay, addMonths, endOfDay } from 'date-fns';
-import { utcToZonedTime } from 'date-fns-tz';
+import { startOfToday, addMonths, endOfDay } from 'date-fns';
 
-export const filterUpcomingEvents = (events = []) => {
-  let today = utcToZonedTime(new Date(), 'America/Los_Angeles');
-  today = startOfDay(today);
-  const end = endOfDay(addMonths(today, 1));
+export const filterEventsByDate = (events, { startDate, endDate }) =>
+  events?.filter((event) => {
+    const eventStartDate = new Date(event.startDate);
 
-  return events.filter(({ startDate }) => {
-    const start = new Date(startDate);
-    return start >= today && start <= end;
+    if (startDate && eventStartDate < startDate) {
+      return false;
+    }
+
+    if (endDate && eventStartDate > endDate) {
+      return false;
+    }
+
+    return true;
   });
+
+export const filterUpcomingEvents = (events) => {
+  const startDate = startOfToday();
+  const endDate = endOfDay(addMonths(startDate, 1));
+
+  return filterEventsByDate(events, { startDate, endDate });
 };
 
-export const sortEvents = (events = []) => {
+export const sortEvents = (events) => {
   const sortedEvents = [...events];
 
   return sortedEvents.sort((a, b) => {
@@ -23,6 +33,7 @@ export const sortEvents = (events = []) => {
 };
 
 export default {
+  filterEventsByDate,
   filterUpcomingEvents,
   sortEvents,
 };
