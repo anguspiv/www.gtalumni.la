@@ -1,3 +1,11 @@
+# [1.25.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.24.0...v1.25.0) (2023-01-04)
+
+
+### Features
+
+* adds upcoming events component ([622c516](https://github.com/anguspiv/www.gtalumni.la/commit/622c5168b4f13de5292fbd8274d010c83bd3f790)), closes [#122](https://github.com/anguspiv/www.gtalumni.la/issues/122)
+* **home:** adds upcoming events section to home pages ([520e688](https://github.com/anguspiv/www.gtalumni.la/commit/520e6881cfeea2e67472119a11fec39bb05970fd)), closes [#122](https://github.com/anguspiv/www.gtalumni.la/issues/122)
+
 # [1.24.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.23.0...v1.24.0) (2023-01-04)
 
 
