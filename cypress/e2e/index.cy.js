@@ -39,4 +39,8 @@ describe('Index Page', () => {
     cy.findByRole('link', { name: 'Facebook Group' }).should('exist');
     cy.findByRole('link', { name: 'hello@gtalumni.la' }).should('exist');
   });
+
+  it('should display the upcoming events', () => {
+    cy.findByRole('heading', { name: 'Upcoming Events' }).should('exist');
+  });
 });

@@ -18,12 +18,21 @@ describe('Global Elements', () => {
     cy.findByRole('link', { name: 'Events' }).click();
 
     cy.location('pathname').should('eq', '/events');
+
+    cy.findByRole('link', { name: 'About' }).click();
+
+    cy.location('pathname').should('eq', '/');
+    cy.location('hash').should('eq', '#about');
+
+    cy.findByRole('link', { name: 'Contact Us' }).click();
+
+    cy.location('pathname').should('eq', '/');
+    cy.location('hash').should('eq', '#contact');
   });
 
   it('should display the footer', () => {
     cy.findByRole('contentinfo').should('exist');
 
-    cy.findByText('Contact Us').should('exist');
     cy.findByRole('link', { name: 'Facebook' }).should('exist');
     cy.findByRole('link', { name: 'Email' }).should('exist');
     cy.findByRole('link', { name: 'GitHub' }).should('exist');

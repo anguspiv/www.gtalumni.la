@@ -4,7 +4,7 @@ import { rem } from 'polished';
 import { isNumber, isString } from 'radash';
 import { Container } from '@components/atoms/Container';
 
-export function Section({ align, as, className, children, maxWidth, background }) {
+export function Section({ align, as, className, children, maxWidth, background, ...props }) {
   const Component = as || 'section';
 
   let bgColor = 'var(--gt-color-background-primary)';
@@ -49,6 +49,7 @@ export function Section({ align, as, className, children, maxWidth, background }
         padding-top: 1rem;
         padding-bottom: 2rem;
       `}
+      {...props}
     >
       <Container
         css={css`
