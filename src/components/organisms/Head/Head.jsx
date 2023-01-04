@@ -23,13 +23,14 @@ export const KEYWORDS = [
 ];
 
 export function Head({ title, description, keywords, image }) {
-  const { pathname } = useRouter();
+  const { asPath } = useRouter();
   const { NEXT_PUBLIC_VERCEL_URL } = process.env;
-  const url = `https://${NEXT_PUBLIC_VERCEL_URL}${pathname}`;
+  const url = `https://${NEXT_PUBLIC_VERCEL_URL}${asPath}`;
 
   return (
     <NextHead>
-      <title>{title}</title>
+      <link rel="canonical" href={url} key="canonical" />
+      <title key="title">{title}</title>
       <meta property="og:title" content={title} key="og:title" />
 
       <meta name="description" content={description} key="description" />
@@ -37,16 +38,25 @@ export function Head({ title, description, keywords, image }) {
 
       <meta name="keywords" content={keywords.join(',')} key="keywords" />
 
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta property="og:image" content={`https://${NEXT_PUBLIC_VERCEL_URL}${image.src}`} />
-      <meta name="twitter:image:alt" content={image.alt} />
+      <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+      <meta
+        property="og:image"
+        content={`https://${NEXT_PUBLIC_VERCEL_URL}${image?.src || socialMediaImage.src}`}
+        key="og:image"
+      />
+      <meta name="twitter:image:alt" content={image?.alt || TITLE} key="twitter:image:alt" />
 
       <meta property="og:url" content={url} key="og:url" />
+      <meta name="twitter:url" content={url} key="twitter:url" />
 
-      <meta property="og:site_name" content="Georgia Tech Alumni Association of Los Angeles" />
-      <meta property="og:type" content="website" />
+      <meta
+        property="og:site_name"
+        content="Georgia Tech Alumni Association of Los Angeles"
+        key="og:site_name"
+      />
+      <meta property="og:type" content="website" key="og:type" />
 
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" key="viewport" />
     </NextHead>
   );
 }
@@ -65,10 +75,7 @@ Head.defaultProps = {
   title: TITLE,
   description: DESCRIPTION,
   keywords: KEYWORDS,
-  image: {
-    src: socialMediaImage.src,
-    alt: TITLE,
-  },
+  image: null,
 };
 
 export default Head;

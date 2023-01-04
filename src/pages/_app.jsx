@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { Global } from '@emotion/react';
 import Script from 'next/script';
+import '@fortawesome/fontawesome-svg-core/styles.css';
 import { globalStyles } from '@styles/global';
 import { Head } from '@components/organisms/Head';
 import { Page } from '@components/templates/Page';

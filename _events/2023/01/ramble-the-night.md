@@ -4,7 +4,7 @@ startDate: 'January 26, 2023 6:00 PM PST'
 endDate: 'January 26, 2023 8:00 PM PST'
 description: "Connect with Jackets and celebrate Tech's spirit in your community
 at Ramble the Night"
-image: /img/events/2023/01/ramble-the-night.jpg
+image: /img/events/2023/01/ramble-the-night-02.jpg
 link:
   href: 'https://securelb.imodules.com/s/1481/alumni/19/interior.aspx?sid=1481&gid=21&pgid=23287&cid=52573'
   label: 'Register'
