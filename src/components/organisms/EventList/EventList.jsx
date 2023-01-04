@@ -55,7 +55,7 @@ export function EventList({ title, events, href }) {
         </Title>
       )}
       {events?.length === 0 && <NoResults>No events found.</NoResults>}
-      {events?.length && (
+      {!!events?.length && (
         <List>
           {events.map(
             ({ title: evtTitle, startDate, description, image, location, endDate, slug }) => (
