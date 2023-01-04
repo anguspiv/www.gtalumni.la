@@ -17,6 +17,7 @@ const Card = styled.div`
   width: 100%;
   border: 1px solid var(--gt-color-light-gray);
   border-radius: 0.5rem;
+  background-color: var(--gt-color-white);
   overflow: hidden;
   min-width: 320px;
 
