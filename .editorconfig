@@ -11,4 +11,4 @@ max_line_length=80
 
 [*.md]
 indent_style = false
-trim_trailing_whitespace=true
+trim_trailing_whitespace=false
