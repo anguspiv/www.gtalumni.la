@@ -20,6 +20,7 @@ const Card = styled.div`
   background-color: var(--gt-color-white);
   overflow: hidden;
   min-width: 320px;
+  align-items: stretch;
 
   ${media.md} {
     grid-template-columns: minmax(240px, 320px) 1fr;
