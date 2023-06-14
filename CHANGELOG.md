@@ -1,3 +1,16 @@
+# [1.26.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.25.1...v1.26.0) (2023-06-14)
+
+
+### Bug Fixes
+
+* **apis:** checks for files when getting event slugs ([d0b459d](https://github.com/anguspiv/www.gtalumni.la/commit/d0b459dc869f6c2cf12efd5104118c99da8fc0e5))
+* **event-card:** stretches image with text ([b5715d0](https://github.com/anguspiv/www.gtalumni.la/commit/b5715d0d6ebfb0640147bb1d67f2e8700b6d080a))
+
+
+### Features
+
+* **events:** adds wreck on the road Event ([cf6cb94](https://github.com/anguspiv/www.gtalumni.la/commit/cf6cb946bd1830dae3f9d4a2fd2f9b5481b18485)), closes [#176](https://github.com/anguspiv/www.gtalumni.la/issues/176)
+
 ## [1.25.1](https://github.com/anguspiv/www.gtalumni.la/compare/v1.25.0...v1.25.1) (2023-01-04)
 
 
