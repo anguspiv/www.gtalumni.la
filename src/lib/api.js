@@ -46,6 +46,11 @@ export const getEventByDateAndSlug = ({ year, month }, slug, fields = []) => {
 
 export const getEventSlugsByMonth = ({ year, month }) => {
   const fullPath = path.join(eventsDir, year, month);
+
+  if (fs.lstatSync(fullPath).isFile()) {
+    return [];
+  }
+
   const fileNames = fs.readdirSync(fullPath);
 
   return fileNames;
