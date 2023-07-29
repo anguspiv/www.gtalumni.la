@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { sort } from 'radash';
 import { useRouter } from 'next/router';
 import { formatInTimeZone } from 'date-fns-tz';
@@ -29,11 +30,11 @@ export default function Events({ events }) {
 }
 
 Events.propTypes = {
-  events: EventList.propTypes.events,
+  events: PropTypes.shape({}),
 };
 
 Events.defaultProps = {
-  events: [],
+  events: {},
 };
 
 export async function getStaticProps() {

@@ -31,6 +31,7 @@ module.exports = {
             max: 15,
           },
         ],
+        'jest/no-untyped-mock-factory': 'off',
       },
     },
     {
