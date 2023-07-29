@@ -1,36 +1,25 @@
-import createCache from '@emotion/cache';
-import { CacheProvider, Global, ThemeProvider } from '@emotion/react';
-import { RouterContext } from 'next/dist/shared/lib/router-context';
-import * as NextImage from 'next/image';
+import { Global, ThemeProvider } from '@emotion/react';
 import { globalStyles } from '@styles/global';
 import { theme } from '@styles/theme';
+import { withThemeFromJSXProvider } from '@storybook/addon-styling';
 
-const cache = createCache({ key: 'css', prepend: true });
+/* TODO: update import for your custom theme configurations */
+// import { lightTheme, darkTheme } from '../path/to/themes';
 
-const OriginalNextImage = NextImage.default;
-
-Object.defineProperty(NextImage, 'default', {
-  configurable: true,
-  value: (props) => (
-    <OriginalNextImage
-      {...props}
-      unoptimized
-      blurDataURL="data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAADAAQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAf/xAAbEAADAAMBAQAAAAAAAAAAAAABAgMABAURUf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAFxEAAwEAAAAAAAAAAAAAAAAAAAECEf/aAAwDAQACEQMRAD8Anz9voy1dCI2mectSE5ioFCqia+KCwJ8HzGMZPqJb1oPEf//Z"
-    />
-  ),
-});
+/* TODO: replace with your own global styles, or remove */
+const GlobalStyles = () => <Global styles={globalStyles} />;
 
 export const decorators = [
-  (Story) => {
-    return (
-      <CacheProvider value={cache}>
-        <ThemeProvider theme={theme}>
-          <Global styles={globalStyles} />
-          <Story />
-        </ThemeProvider>
-      </CacheProvider>
-    );
-  },
+  withThemeFromJSXProvider({
+    /* Uncomment for theme switching support */
+    themes: {
+      light: theme,
+      // dark: darkTheme,
+    },
+    defaultTheme: 'light',
+    Provider: ThemeProvider,
+    GlobalStyles,
+  }),
 ];
 
 export const parameters = {
@@ -40,8 +29,5 @@ export const parameters = {
       color: /(background|color)$/i,
       date: /Date$/,
     },
-  },
-  nextRouter: {
-    Provider: RouterContext.Provider,
   },
 };
