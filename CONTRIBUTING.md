@@ -17,16 +17,39 @@ All types of contributions are encouraged and valued. See the [Table of Contents
 
 ## Table of Contents
 
-- [Code of Conduct](#code-of-conduct)
-- [I Have a Question](#i-have-a-question)
-- [I Want To Contribute](#i-want-to-contribute)
-  - [Reporting Bugs](#reporting-bugs)
-  - [Suggesting Enhancements](#suggesting-enhancements)
-  - [Your First Code Contribution](#your-first-code-contribution)
-  - [Improving The Documentation](#improving-the-documentation)
-- [Styleguides](#styleguides)
-  - [Commit Messages](#commit-messages)
-- [Join The Project Team](#join-the-project-team)
+- [Contributing to \<www.gtalumni.la\>](#contributing-to-wwwgtalumnila)
+  - [Table of Contents](#table-of-contents)
+  - [Code of Conduct](#code-of-conduct)
+  - [I Have a Question](#i-have-a-question)
+  - [I Want To Contribute](#i-want-to-contribute)
+    - [Reporting Bugs](#reporting-bugs)
+      - [Before Submitting a Bug Report](#before-submitting-a-bug-report)
+      - [How Do I Submit a Good Bug Report?](#how-do-i-submit-a-good-bug-report)
+    - [Suggesting Enhancements](#suggesting-enhancements)
+      - [Before Submitting an Enhancement](#before-submitting-an-enhancement)
+      - [How Do I Submit a Good Enhancement Suggestion?](#how-do-i-submit-a-good-enhancement-suggestion)
+  - [Local Development](#local-development)
+    - [Installation](#installation)
+      - [Requirements](#requirements)
+      - [Setup](#setup)
+    - [Your First Code Contribution](#your-first-code-contribution)
+      - [Finding an Issue to Work On](#finding-an-issue-to-work-on)
+      - [Creating a Branch](#creating-a-branch)
+      - [Making Changes](#making-changes)
+      - [Committing Your Changes](#committing-your-changes)
+      - [Pushing Your Changes](#pushing-your-changes)
+      - [Creating a Pull Request](#creating-a-pull-request)
+      - [Reviewing Your Pull Request](#reviewing-your-pull-request)
+      - [Requesting a Review](#requesting-a-review)
+      - [Releasing](#releasing)
+    - [Improving The Documentation](#improving-the-documentation)
+  - [Styleguides](#styleguides)
+    - [AirBnB JavaScript Style Guide](#airbnb-javascript-style-guide)
+    - [Branching Model](#branching-model)
+      - [Branch Naming](#branch-naming)
+    - [Commit Messages](#commit-messages)
+    - [Testing](#testing)
+    - [Folder Structure](#folder-structure)
 
 ## Code of Conduct
 
@@ -316,13 +339,11 @@ In addition to the components, the project also has the following folders:
 - **Styles** `src/styles/` - These are the global styles of the application. These are usually for setting up the theme and global styles.
 - **Utils** `src/utils/` - These are utility functions that are reusable throughout components and the application.
 
-## Join The Project Team
+## Join The Project Team <!-- omit in toc -->
 
 If you are interested in joining the project team, please contact the project lead at [hello@gtalumni.la](mailto:hello@gtalumni.la).
 
-<!-- omit in toc -->
-
-## Attribution
+## Attribution <!-- omit in toc -->
 
 This guide is based on the **contributing-gen**. [Make your own](https://github.com/bttger/contributing-gen)!
 
