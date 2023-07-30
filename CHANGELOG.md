@@ -1,3 +1,10 @@
+# [1.27.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.26.0...v1.27.0) (2023-07-30)
+
+
+### Features
+
+* customizes the error page ([2495868](https://github.com/anguspiv/www.gtalumni.la/commit/2495868ac5c83deb908ccaea0076806ab98a1150)), closes [#140](https://github.com/anguspiv/www.gtalumni.la/issues/140)
+
 # [1.26.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.25.1...v1.26.0) (2023-06-14)
 
 
