@@ -1,34 +1,29 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# [www.gtalumni.la](https://www.gtalumni.la)
 
-## Getting Started
+The Georgia Tech Alumni Association of Los Angeles website.
 
-First, run the development server:
+## Contributing
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+Contributions are always welcome!
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+See [`CONTRIBUTING.md`](./CONTRIBUTING.md) for ways to get started.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Please adhere to this project's [`code of conduct`](./CODE_OF_CONDUCT.md).
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Support
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+For support, email [hello@gtalumni.la](mailto:hello@gtalumni.la).
 
-## Learn More
+## Roadmap
 
-To learn more about Next.js, take a look at the following resources:
+The current roadmap is a work in progress but will be updated as the project progresses.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+See the [Issues](https://github.com/anguspiv/www.gtalumni.la/issues) for a list of proposed features (and known issues.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+See the [Roadmap](https://github.com/users/anguspiv/projects/5/views/5) for the current roadmap, with the issues that are currently being worked on.
 
-## Deploy on Vercel
+See the [Change Log](./CHANGELOG.md) for a list of released changes.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Authors and Acknowledgement
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [@anguspiv](https://github.com/anguspiv) for the initial work on the website.
