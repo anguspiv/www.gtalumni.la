@@ -21,7 +21,7 @@ module.exports = {
       env: {
         jest: true,
       },
-      files: ['**/*.test.js?(x)', './__tests__/**/*.js?(x)'],
+      files: ['**/*.test.js?(x)', './__tests__/**/*.js?(x)', '**/test-utils.jsx'],
       plugins: ['jest', 'testing-library', 'jest-dom'],
       extends: ['plugin:testing-library/react', 'plugin:jest-dom/recommended', 'plugin:jest/all'],
       rules: {
@@ -32,6 +32,7 @@ module.exports = {
           },
         ],
         'jest/no-untyped-mock-factory': 'off',
+        'import/no-extraneous-dependencies': 'off',
       },
     },
     {
