@@ -124,15 +124,11 @@ const getCSS = (variant) => VARIANT_STYLES[variant] || VARIANT_STYLES[BODY_1];
 
 const getComponent = (variant) => VARIANT_COMPONENT[variant] || P;
 
-export function Typography({ children, className, component, variant, ...props }) {
+export function Typography({ component, variant, ...props }) {
   const Component = component || getComponent(variant);
   const styles = getCSS(variant);
 
-  return (
-    <Component css={styles} className={className} {...props}>
-      {children}
-    </Component>
-  );
+  return <Component css={styles} {...props} />;
 }
 
 Typography.propTypes = {
