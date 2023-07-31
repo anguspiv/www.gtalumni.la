@@ -94,7 +94,7 @@
     "jest-environment-jsdom": "^29.0.2",
     "lint-staged": "^13.0.3",
     "prettier": "2.7.1",
-    "semantic-release": "^19.0.5",
+    "semantic-release": "^21.0.7",
     "storybook": "^7.1.1",
     "storybook-addon-swc": "^1.2.0",
     "storybook-dark-mode": "^3.0.1"
