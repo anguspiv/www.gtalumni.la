@@ -15,4 +15,5 @@ Default.args = {
   label: 'Label',
   id: 'input',
   message: 'Message',
+  type: 'text',
 };

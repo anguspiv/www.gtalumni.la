@@ -1,38 +1,30 @@
 import PropTypes from 'prop-types';
 import { forwardRef } from 'react';
-import styled from '@emotion/styled';
 import { InputOutline } from '@components/atoms/InputOutline';
 import { InputBase } from '@components/atoms/InputBase';
 import { Label } from '@components/atoms/Label';
-import { Typography } from '@components/atoms/Typography';
-
-const Message = styled(Typography)`
-  margin: 0;
-  ${({ error }) => error && `color: var(--gt-color-status-error);`}
-`;
+import { InputMessage } from '@components/atoms/InputMessage';
+import { InputField } from '@components/atoms/InputField';
 
 export const Input = forwardRef(({ label, className, message, ...props }, ref) => {
-  const { error, disabled, id } = props;
+  const { error, disabled, id, name } = props;
   return (
-    <div data-testid="input" className={className}>
-      <Label error={error} disabled={disabled} htmlFor={id}>
+    <InputField data-testid="input" className={className}>
+      <Label error={error} disabled={disabled} htmlFor={id || name}>
         {label}
       </Label>
       <InputOutline error={error} disabled={disabled}>
         <InputBase ref={ref} {...props} />
       </InputOutline>
-      {message && (
-        <Message error={error} variant="body2">
-          {message}
-        </Message>
-      )}
-    </div>
+      {message && <InputMessage error={error}>{message}</InputMessage>}
+    </InputField>
   );
 });
 
 Input.propTypes = {
   label: PropTypes.node.isRequired,
   id: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
   className: PropTypes.string,
   error: PropTypes.bool,
   disabled: PropTypes.bool,
