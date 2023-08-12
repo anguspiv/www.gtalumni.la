@@ -1,5 +1,17 @@
 import { css } from '@emotion/react';
 
+const blueValues = {
+  100: '#e6f0ff',
+  200: '#b3d1ff',
+  300: '#80b2ff',
+  400: '#4d93ff',
+  500: '#1a74ff',
+  600: '#005ce6',
+  700: '#0047b3',
+  800: '#003380',
+  900: '#001f4d',
+};
+
 const colorValues = {
   gold: '#b3a369',
   mediumGold: '#a4925a', // Tech Medium Gold
@@ -40,6 +52,18 @@ export const brand = css`
   --gt-color-purple: #7800ff;
   --gt-color-light-yellow: #ffcc00;
   --gt-color-yellow: #eeb211;
+`;
+
+export const blue = css`
+  --gt-color-blue-100: ${blueValues[100]};
+  --gt-color-blue-200: ${blueValues[200]};
+  --gt-color-blue-300: ${blueValues[300]};
+  --gt-color-blue-400: ${blueValues[400]};
+  --gt-color-blue-500: ${blueValues[500]};
+  --gt-color-blue-600: ${blueValues[600]};
+  --gt-color-blue-700: ${blueValues[700]};
+  --gt-color-blue-800: ${blueValues[800]};
+  --gt-color-blue-900: ${blueValues[900]};
 `;
 
 export const text = css`
@@ -106,6 +130,7 @@ export const social = css`
 `;
 
 export const colors = css`
+  ${blue}
   ${brand}
   ${background}
   ${status}
