@@ -48,7 +48,7 @@ const schema = yup.object({
     }),
   }),
   description: yup.string().required('Please enter a description for the event.'),
-  details: yup.string().max(501, 'Please enter a description that is no more than 500 characters.'),
+  details: yup.string().max(801, 'Please enter a description that is no more than 800 characters.'),
   contact: yup.object({
     name: yup.string().required('Please enter a name for the contact.'),
     email: yup
@@ -66,6 +66,43 @@ const Fieldset = styled.fieldset`
     border-top: none;
   }
 `;
+
+const TitleInfo = 'An title for the event such as "Game Watching - GT vs UVA" or "Happy Hour"';
+
+const StartDateInfo = 'The start date and time of the event. All times are in PST.';
+
+const EndDateInfo = 'The end date and time of the event. All times are in PST.';
+
+const DescriptionInfo =
+  'A short description of the event. This will be displayed on the event card, and any social media posts.';
+
+const LinkInfo =
+  'An optional link to display as a button on the event page. If a link is provided, a label is required. Some examples might be a registration page, or a link to a live stream.';
+
+const LinkLabelInfo = `The label for the link to be displayed on the Event Page. ${LinkInfo}`;
+
+const LinkUrlInfo = `The URL for the link to be displayed on the Event Page. ${LinkInfo}`;
+
+const LocationNameInfo = 'The name of the location for the event.';
+
+const LocationUrlInfo =
+  'An optional URL for the location of the event. Such as the location website.';
+
+const LocationStreetInfo = 'The street address for the location of the event.';
+
+const LocationCityInfo = 'The city for the location of the event.';
+
+const LocationStateInfo = 'The state for the location of the event.';
+
+const LocationZipInfo = 'The zip code for the location of the event.';
+
+const DetailsInfo = 'Additional details about the event. This will be displayed on the event page.';
+
+const ContactNameInfo =
+  'Please give us your name, so that we may contact you if we have any questions.';
+
+const ContactEmailInfo =
+  'Please give us your email address, so that we may contact you if we have any questions.';
 
 export function EventForm({ onSubmit, values }) {
   const {
@@ -97,6 +134,7 @@ export function EventForm({ onSubmit, values }) {
             id="title"
             error={!!errors?.title?.message}
             message={errors?.title?.message}
+            popup={TitleInfo}
           />
           <Input
             label="Start Date"
@@ -106,6 +144,7 @@ export function EventForm({ onSubmit, values }) {
             id="startDate"
             error={!!errors?.startDate?.message}
             message={errors?.startDate?.message}
+            popup={StartDateInfo}
           />
           <Input
             label="End Date"
@@ -115,6 +154,7 @@ export function EventForm({ onSubmit, values }) {
             id="endDate"
             error={!!errors?.endDate?.message}
             message={errors?.endDate?.message}
+            popup={EndDateInfo}
           />
           <TextArea
             label="Description"
@@ -124,6 +164,7 @@ export function EventForm({ onSubmit, values }) {
             error={!!errors?.description?.message}
             message={errors?.description?.message}
             max={250}
+            popup={DescriptionInfo}
           />
         </Fieldset>
         <Fieldset>
@@ -134,6 +175,7 @@ export function EventForm({ onSubmit, values }) {
             id="link-label"
             error={!!errors?.link?.label?.message}
             message={errors?.link?.label?.message}
+            popup={LinkLabelInfo}
           />
           <Input
             label="Link URL"
@@ -142,6 +184,7 @@ export function EventForm({ onSubmit, values }) {
             id="link-url"
             error={!!errors?.link?.url?.message}
             message={errors?.link?.url?.message}
+            popup={LinkUrlInfo}
           />
         </Fieldset>
         <Fieldset>
@@ -152,6 +195,7 @@ export function EventForm({ onSubmit, values }) {
             id="location-name"
             error={!!errors?.location?.name?.message}
             message={errors?.location?.name?.message}
+            popup={LocationNameInfo}
           />
           <Input
             label="Location URL"
@@ -160,6 +204,7 @@ export function EventForm({ onSubmit, values }) {
             id="location-url"
             error={!!errors?.location?.url?.message}
             message={errors?.location?.url?.message}
+            popup={LocationUrlInfo}
           />
           <Input
             label="Street"
@@ -168,6 +213,7 @@ export function EventForm({ onSubmit, values }) {
             id="street"
             error={!!errors?.location?.address?.street?.message}
             message={errors?.location?.address?.street?.message}
+            popup={LocationStreetInfo}
           />
           <Input
             label="City"
@@ -176,6 +222,7 @@ export function EventForm({ onSubmit, values }) {
             id="city"
             error={!!errors?.location?.address?.city?.message}
             message={errors?.location?.address?.city?.message}
+            popup={LocationCityInfo}
           />
           <Input
             label="State"
@@ -184,6 +231,7 @@ export function EventForm({ onSubmit, values }) {
             id="state"
             error={!!errors?.location?.address?.state?.message}
             message={errors?.location?.address?.state?.message}
+            popup={LocationStateInfo}
           />
           <Input
             label="Zip"
@@ -192,6 +240,7 @@ export function EventForm({ onSubmit, values }) {
             id="zip"
             error={!!errors?.location?.address?.zip?.message}
             message={errors?.location?.address?.zip?.message}
+            popup={LocationZipInfo}
           />
         </Fieldset>
         <Fieldset>
@@ -201,6 +250,9 @@ export function EventForm({ onSubmit, values }) {
             disabled={isFormDisabled}
             id="details"
             max={800}
+            popup={DetailsInfo}
+            error={!!errors?.details?.message}
+            message={errors?.details?.message}
           />
         </Fieldset>
         <Fieldset>
@@ -211,6 +263,7 @@ export function EventForm({ onSubmit, values }) {
             id="contact-name"
             error={!!errors?.contact?.name?.message}
             message={errors?.contact?.name?.message}
+            popup={ContactNameInfo}
           />
           <Input
             label="Contact Email"
@@ -219,6 +272,7 @@ export function EventForm({ onSubmit, values }) {
             id="contact-email"
             error={!!errors?.contact?.email?.message}
             message={errors?.contact?.email?.message}
+            popup={ContactEmailInfo}
           />
         </Fieldset>
         <Button type="submit" disabled={isSubmitDisabled}>

@@ -1,9 +1,12 @@
-import { render, screen, fireEvent, waitFor } from '@lib/test-utils';
+import userEvent from '@testing-library/user-event';
+import { render, screen } from '@lib/test-utils';
 import { EventForm } from './EventForm';
 
 describe('<EventForm />', () => {
   it('should render the form', async () => {
-    expect.hasAssertions();
+    expect.assertions(4);
+
+    const user = userEvent.setup();
 
     const onSubmit = jest.fn();
 
@@ -29,39 +32,51 @@ describe('<EventForm />', () => {
 
     expect(screen.getByRole('button', { name: /submit/i })).toBeDisabled();
 
-    fireEvent.change(screen.getByLabelText(/title/i), { target: { value: 'Test Title' } });
+    await user.type(screen.getByRole('textbox', { name: /title/i }), 'Test Title');
 
-    await waitFor(() => expect(screen.getByRole('button', { name: /submit/i })).toBeEnabled());
+    await user.clear(screen.getByLabelText('Start Date'));
 
-    fireEvent.click(screen.getByRole('button', { name: /submit/i }));
+    await user.type(screen.getByLabelText('Start Date'), '3032-09-13T10:10');
 
-    await waitFor(() =>
-      expect(onSubmit).toHaveBeenCalledWith({
-        title: 'Test Title',
-        startDate: '',
-        endDate: '',
-        link: {
-          url: '',
-          label: '',
+    await user.clear(screen.getByLabelText('End Date'));
+
+    await user.type(screen.getByLabelText('End Date'), '3032-09-14T10:10');
+
+    await user.type(screen.getByRole('textbox', { name: /description/i }), 'Test Description');
+
+    await user.type(screen.getByRole('textbox', { name: /contact name/i }), 'Test User');
+
+    await user.type(screen.getByRole('textbox', { name: /contact email/i }), 'test@test.com');
+
+    expect(screen.getByRole('button', { name: /submit/i })).toBeEnabled();
+
+    await user.click(screen.getByRole('button', { name: /submit/i }));
+
+    expect(onSubmit).toHaveBeenCalledWith({
+      title: 'Test Title',
+      startDate: new Date('3032-09-13T10:10'),
+      endDate: new Date('3032-09-14T10:10'),
+      link: {
+        url: '',
+        label: '',
+      },
+      location: {
+        name: '',
+        url: '',
+        address: {
+          street: '',
+          city: '',
+          state: '',
+          zip: '',
         },
-        location: {
-          name: '',
-          url: '',
-          address: {
-            street: '',
-            city: '',
-            state: '',
-            zip: '',
-          },
-        },
-        description: '',
-        details: '',
-        contact: {
-          name: '',
-          email: '',
-        },
-      }),
-    );
+      },
+      description: 'Test Description',
+      details: '',
+      contact: {
+        name: 'Test User',
+        email: 'test@test.com',
+      },
+    });
   });
 
   it('should render the form with initial values', async () => {
