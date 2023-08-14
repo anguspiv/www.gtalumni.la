@@ -37,7 +37,14 @@ export function InfoPopup({ children, label }) {
       <InfoButton label={label} ref={refs.setReference} {...getReferenceProps()} />
       {isOpen && (
         <FloatingFocusManager context={context}>
-          <div ref={refs.setFloating} style={floatingStyles} {...getFloatingProps()}>
+          <div
+            ref={refs.setFloating}
+            style={floatingStyles}
+            {...getFloatingProps()}
+            css={css`
+              z-index: var(--gt-z-index-tooltip);
+            `}
+          >
             <Surface
               css={css`
                 display: inline-block;
