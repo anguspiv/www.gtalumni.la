@@ -17,3 +17,10 @@ Default.args = {
   message: 'Message',
   type: 'text',
 };
+
+export const WithPopup = Template.bind({});
+
+WithPopup.args = {
+  ...Default.args,
+  popup: 'This is my Example Content to display',
+};
