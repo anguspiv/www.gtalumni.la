@@ -3,8 +3,10 @@ import userEvent from '@testing-library/user-event';
 import { InfoPopup } from './InfoPopup';
 
 describe('<InfoPopup />', () => {
-  it('renders InfoPopup component', () => {
+  it('renders InfoPopup component', async () => {
     expect.assertions(3);
+
+    const user = userEvent.setup();
 
     render(
       <InfoPopup label="Test Info">
@@ -15,7 +17,7 @@ describe('<InfoPopup />', () => {
     expect(screen.getByRole('button', { name: 'Test Info' })).toBeInTheDocument();
     expect(screen.queryByText('InfoPopup Example Content')).not.toBeInTheDocument();
 
-    userEvent.click(screen.getByRole('button', { name: 'Test Info' }));
+    await user.click(screen.getByRole('button', { name: 'Test Info' }));
 
     expect(screen.getByText('InfoPopup Example Content')).toBeInTheDocument();
   });
