@@ -135,6 +135,7 @@ export function EventForm({ onSubmit, values }) {
             error={!!errors?.title?.message}
             message={errors?.title?.message}
             popup={TitleInfo}
+            disabled={isFormDisabled}
           />
           <Input
             label="Start Date"
