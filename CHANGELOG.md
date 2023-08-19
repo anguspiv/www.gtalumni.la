@@ -1,3 +1,29 @@
+# [1.28.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.27.0...v1.28.0) (2023-08-19)
+
+
+### Bug Fixes
+
+* **info-popup:** adds z-index style ([f3b6041](https://github.com/anguspiv/www.gtalumni.la/commit/f3b60414164ca30e03cc19e4890a9abc90d77d55))
+
+
+### Features
+
+* adds text area component ([0624ff3](https://github.com/anguspiv/www.gtalumni.la/commit/0624ff3aee3cc81ef42779c15fd3dceea0e6d52a))
+* adds the event form components ([87bbab6](https://github.com/anguspiv/www.gtalumni.la/commit/87bbab6603898f88ac22db44d830b96edbb37511)), closes [#177](https://github.com/anguspiv/www.gtalumni.la/issues/177)
+* adds the info popup components ([9b205ae](https://github.com/anguspiv/www.gtalumni.la/commit/9b205ae99d65986d254fa919ccacc2f5978c7ced)), closes [#177](https://github.com/anguspiv/www.gtalumni.la/issues/177)
+* adds the input base component ([628142e](https://github.com/anguspiv/www.gtalumni.la/commit/628142eb9af53ab21c49c2bfe1644047e6c65fa7)), closes [#177](https://github.com/anguspiv/www.gtalumni.la/issues/177)
+* adds the input component ([708eb80](https://github.com/anguspiv/www.gtalumni.la/commit/708eb8090595407513f4c483bb3f93628842bab3)), closes [#177](https://github.com/anguspiv/www.gtalumni.la/issues/177)
+* adds the input field component ([cc99bf9](https://github.com/anguspiv/www.gtalumni.la/commit/cc99bf965262af9a57af501061990e7dbe40e86b))
+* adds the input message component ([4a3acb8](https://github.com/anguspiv/www.gtalumni.la/commit/4a3acb8f12d9b40c70130d5a5f9c58179f9d272e))
+* adds the input outline component ([4c5bde7](https://github.com/anguspiv/www.gtalumni.la/commit/4c5bde7211b2e89de09e7872ef5ca88cd2f6f9a9)), closes [#177](https://github.com/anguspiv/www.gtalumni.la/issues/177)
+* adds the label component ([309f591](https://github.com/anguspiv/www.gtalumni.la/commit/309f5916bb9392867fba8280475f5bd78fa961f1)), closes [#177](https://github.com/anguspiv/www.gtalumni.la/issues/177)
+* adds the surface component ([f92aa8d](https://github.com/anguspiv/www.gtalumni.la/commit/f92aa8d3bd3ef2b00a38da8d3d9e2a5a61912c15)), closes [#177](https://github.com/anguspiv/www.gtalumni.la/issues/177)
+* adds z-index css variables ([62de797](https://github.com/anguspiv/www.gtalumni.la/commit/62de79707c33c1202d2ebdb9d227b9b9aaf83703))
+* **atoms:** adds the info button component ([c80df14](https://github.com/anguspiv/www.gtalumni.la/commit/c80df14f641bbe2fa11bea23a16c0cb8bdabe7d1))
+* **event-form:** adds info popups for all fields ([19a68e6](https://github.com/anguspiv/www.gtalumni.la/commit/19a68e63865144a7294801f2d0e02316b10c0a89)), closes [#177](https://github.com/anguspiv/www.gtalumni.la/issues/177)
+* **input:** adds optional info popup ([791d3d9](https://github.com/anguspiv/www.gtalumni.la/commit/791d3d9c49f1991776c7e3a6fa16d6617300aa27))
+* **textarea:** adds optional info popup ([ef82978](https://github.com/anguspiv/www.gtalumni.la/commit/ef82978238684fb42c431f9d428a0b42cb4bddcd))
+
 # [1.27.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.26.0...v1.27.0) (2023-07-30)
 
 
