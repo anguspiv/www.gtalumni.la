@@ -1,3 +1,10 @@
+## [1.28.1](https://github.com/anguspiv/www.gtalumni.la/compare/v1.28.0...v1.28.1) (2023-08-19)
+
+
+### Bug Fixes
+
+* **event-form:** disables title input on form submit ([bcca885](https://github.com/anguspiv/www.gtalumni.la/commit/bcca8850ba3295f79b2c20ced11384888fea4a22))
+
 # [1.28.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.27.0...v1.28.0) (2023-08-19)
 
 
