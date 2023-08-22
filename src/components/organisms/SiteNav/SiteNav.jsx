@@ -47,6 +47,9 @@ export function SiteNav({ className }) {
             <Link href="/events">Events</Link>
           </li>
           <li>
+            <Link href="/game-watching">Game Watching</Link>
+          </li>
+          <li>
             <Link href="/#about">About</Link>
           </li>
           <li>
