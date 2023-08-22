@@ -23,7 +23,7 @@ const StyledTypography = styled(Typography)`
   }
 `;
 
-export function Label(props) {
+export function Label({ error, ...props }) {
   return <StyledTypography component="label" variant="button" {...props} />;
 }
 
