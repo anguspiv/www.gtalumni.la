@@ -1,3 +1,10 @@
+# [1.29.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.28.1...v1.29.0) (2023-08-23)
+
+
+### Features
+
+* adds the games watching page ([b93e1ac](https://github.com/anguspiv/www.gtalumni.la/commit/b93e1ac9c1f9b6247004eebdf6a7f481adef4330))
+
 ## [1.28.1](https://github.com/anguspiv/www.gtalumni.la/compare/v1.28.0...v1.28.1) (2023-08-19)
 
 
