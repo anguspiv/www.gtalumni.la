@@ -1,3 +1,10 @@
+# [1.30.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.29.0...v1.30.0) (2023-08-25)
+
+
+### Features
+
+* adds the gt vs louisville game watching event ([f324b4a](https://github.com/anguspiv/www.gtalumni.la/commit/f324b4a9b7ae501ca99ba3e499223a9e0ab9ef9d)), closes [#213](https://github.com/anguspiv/www.gtalumni.la/issues/213)
+
 # [1.29.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.28.1...v1.29.0) (2023-08-23)
 
 
