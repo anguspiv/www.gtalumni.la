@@ -94,9 +94,11 @@ export const getAllEvents = (fields = []) => {
     const yearEvents = Object.keys(months).reduce((acc2, month) => {
       const monthSlugs = months[month];
 
-      const monthEvents = monthSlugs.map((slug) =>
+      let monthEvents = monthSlugs.map((slug) =>
         getEventByDateAndSlug({ year, month }, slug, fields),
       );
+
+      monthEvents = sortEvents(monthEvents);
 
       return [...acc2, ...monthEvents];
     }, []);
@@ -110,7 +112,9 @@ export const getAllEvents = (fields = []) => {
 export const getEventsByMonth = (params, fields = []) => {
   const slugs = getEventSlugsByMonth(params);
 
-  const events = slugs.map((slug) => getEventByDateAndSlug(params, slug, fields));
+  let events = slugs.map((slug) => getEventByDateAndSlug(params, slug, fields));
+
+  events = sortEvents(events);
 
   return events;
 };
@@ -121,9 +125,11 @@ export const getEventsByYear = (params, fields = []) => {
   const events = Object.keys(slugs).reduce((acc, month) => {
     const monthSlugs = slugs[month];
 
-    const monthEvents = monthSlugs.map((slug) =>
+    let monthEvents = monthSlugs.map((slug) =>
       getEventByDateAndSlug({ ...params, month }, slug, fields),
     );
+
+    monthEvents = sortEvents(monthEvents);
 
     return [...acc, ...monthEvents];
   }, []);
