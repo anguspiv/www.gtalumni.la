@@ -129,13 +129,21 @@ export function EventCard({
   const parsedEnd = new Date(endDate);
 
   const calStartDate = formatInTimeZone(parsedStart, 'America/Los_Angeles', 'yyyy-MM-dd');
-  const calStartTime = formatInTimeZone(parsedStart, 'America/Los_Angeles', 'HH:mm');
+  let calStartTime = formatInTimeZone(parsedStart, 'America/Los_Angeles', 'HH:mm');
   const calEndDate = endDate
     ? formatInTimeZone(parsedEnd, 'America/Los_Angeles', 'yyyy-MM-dd')
     : null;
-  const calEndTime = endDate ? formatInTimeZone(parsedEnd, 'America/Los_Angeles', 'HH:mm') : null;
+  let calEndTime = endDate ? formatInTimeZone(parsedEnd, 'America/Los_Angeles', 'HH:mm') : null;
 
-  const displayDate = formatInTimeZone(parsedStart, 'America/Los_Angeles', 'MMM. do @ h:mm a');
+  let displayFormat = 'MMM. do @ h:mm a';
+
+  if (calStartTime === calEndTime) {
+    displayFormat = 'MMM. do';
+    calStartTime = null;
+    calEndTime = null;
+  }
+
+  const displayDate = formatInTimeZone(parsedStart, 'America/Los_Angeles', displayFormat);
 
   const url = getEventUrl(startDate, slug);
   const locationStr = getLocationString(location.name, location.address);
