@@ -18,15 +18,25 @@ export const getEncodedAddress = (address, name = '') => {
 export const getLocationString = (title, address = {}) => {
   const { street, street2, city, state, zip } = address;
 
-  let str = `${title} ${street}`;
+  let str = `${title || ''} ${street || ''}`;
 
   if (street2) {
-    str = `${str} ${street2}`;
+    str = `${str} ${street2 || ''}`;
   }
 
-  str = `${str}, ${city}, ${state} ${zip}`;
+  if (city) {
+    str = `${str}, ${city || ''}`;
+  }
 
-  return str;
+  if (state) {
+    str = `${str}, ${state || ''}`;
+  }
+
+  if (zip) {
+    str = `${str} ${zip || ''}`;
+  }
+
+  return str.trim();
 };
 
 export default {
