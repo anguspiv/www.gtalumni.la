@@ -63,7 +63,7 @@ export default function Event({ event, month }) {
   const seoTitle = `${title} - ${formattedDate}`;
   const imageUrl = `${image}`;
 
-  const locationString = getLocationString(location.name, location.address);
+  const locationString = getLocationString(location?.name, location?.address);
 
   const hasLink = !!link && !!link?.href;
 
@@ -100,10 +100,12 @@ export default function Event({ event, month }) {
           />
         </ButtonWrapper>
       </Section>
-      <Section align="center" background="secondary" maxWidth={800}>
-        <Typography variant="h2">Location</Typography>
-        <LocationCard address={location.address} name={location.name} href={location.href} />
-      </Section>
+      {location && location?.address && (
+        <Section align="center" background="secondary" maxWidth={800}>
+          <Typography variant="h2">Location</Typography>
+          <LocationCard address={location.address} name={location.name} href={location.href} />
+        </Section>
+      )}
     </>
   );
 }
