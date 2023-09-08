@@ -42,4 +42,38 @@ describe('getLocationString', () => {
 
     expect(getLocationString(title, address)).toBe(expected);
   });
+
+  it('should return a location string without a title', () => {
+    expect.assertions(1);
+
+    const address = {
+      street: '123 Fake St',
+      street2: 'Apt 456',
+      city: 'Springfield',
+      state: 'OR',
+      zip: '12345',
+    };
+
+    const expected = '123 Fake St Apt 456, Springfield, OR 12345';
+
+    expect(getLocationString(null, address)).toBe(expected);
+  });
+
+  it('should return a location string without an address', () => {
+    expect.assertions(1);
+
+    const title = 'My Event';
+
+    const expected = 'My Event';
+
+    expect(getLocationString(title)).toBe(expected);
+  });
+
+  it('should return a location string without a title or address', () => {
+    expect.assertions(1);
+
+    const expected = '';
+
+    expect(getLocationString()).toBe(expected);
+  });
 });
