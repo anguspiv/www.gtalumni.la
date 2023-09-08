@@ -38,20 +38,24 @@ export default function Event({ event, month }) {
   const parsedStartDate = new Date(startDate);
   const parsedEndDate = new Date(endDate);
 
-  const formattedDate = formatInTimeZone(
-    parsedStartDate,
-    'America/Los_Angeles',
-    'MMMM d, yyyy @ h:mm a',
-    {
-      timeZone: 'America/Los_Angeles',
-    },
-  );
   const formattedMonth = formatInTimeZone(parsedStartDate, 'America/Los_Angeles', 'MMMM');
 
   const calStartDate = formatInTimeZone(parsedStartDate, 'America/Los_Angeles', 'yyyy-MM-dd');
   const calEndDate = formatInTimeZone(parsedEndDate, 'America/Los_Angeles', 'yyyy-MM-dd');
-  const calStartTime = formatInTimeZone(parsedStartDate, 'America/Los_Angeles', 'HH:mm');
-  const calEndTime = formatInTimeZone(parsedEndDate, 'America/Los_Angeles', 'HH:mm');
+  let calStartTime = formatInTimeZone(parsedStartDate, 'America/Los_Angeles', 'HH:mm');
+  let calEndTime = formatInTimeZone(parsedEndDate, 'America/Los_Angeles', 'HH:mm');
+
+  let dateFormat = 'MMMM d, yyyy @ h:mm a';
+
+  if (calStartTime === calEndTime) {
+    dateFormat = 'MMMM d, yyyy';
+    calStartTime = null;
+    calEndTime = null;
+  }
+
+  const formattedDate = formatInTimeZone(parsedStartDate, 'America/Los_Angeles', dateFormat, {
+    timeZone: 'America/Los_Angeles',
+  });
 
   const labels = {};
   labels[month] = formattedMonth;
