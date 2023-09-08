@@ -7,14 +7,14 @@ image: /img/events/default-football.jpg
 link:
   label:
   href:
-# location:
-#   name: The Garage on Motor
-#   href: https://www.thegarageonmotor.com/
-#   address:
-#     street: '3387 Motor Ave'
-#     city: 'Los Angeles'
-#     state: 'CA'
-#     zip: '90034'
+location:
+  name: The Garage on Motor
+  href: https://www.thegarageonmotor.com/
+  address:
+    street: '3387 Motor Ave'
+    city: 'Los Angeles'
+    state: 'CA'
+    zip: '90034'
 ---
 
 Join us and watch the Georgia Tech Yellow Jackets take on Ole Miss Rebels.
