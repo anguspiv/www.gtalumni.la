@@ -106,4 +106,42 @@ describe('<EventCard />', () => {
       endTime: '13:00',
     });
   });
+
+  it('should render an all day event', () => {
+    expect.assertions(2);
+
+    render(
+      <EventCard
+        title="Example Event"
+        slug="example-event"
+        startDate="January 1, 2021 12:00 AM PST"
+        endDate="January 1, 2021 12:00 AM PST"
+        description="This is an example event."
+        location={{
+          name: 'Example Location',
+          address: {
+            street: '123 Example Street',
+            street2: 'Suite 123',
+            city: 'Example City',
+            state: 'Example State',
+            zip: '12345',
+          },
+        }}
+      />,
+    );
+
+    expect(screen.getByText('Jan. 1st')).toBeInTheDocument();
+
+    fireEvent.click(screen.getByRole('button', { name: 'Add To Calendar' }));
+
+    const call = addEventToCalendar.mock.calls[0][0];
+
+    expect(call).toMatchObject({
+      name: 'Example Event',
+      description: 'This is an example event.',
+      location: 'Example Location 123 Example Street Suite 123, Example City, Example State 12345',
+      startDate: '2021-01-01',
+      endDate: '2021-01-01',
+    });
+  });
 });
