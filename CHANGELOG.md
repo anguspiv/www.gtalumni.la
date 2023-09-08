@@ -1,3 +1,20 @@
+# [1.31.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.30.0...v1.31.0) (2023-09-08)
+
+
+### Bug Fixes
+
+* **events:** adds back ole miss location data ([2482723](https://github.com/anguspiv/www.gtalumni.la/commit/24827231e11b1d9b42be3c20586443ad6df292f8))
+* **events:** correctly sorts events in list views ([72045f5](https://github.com/anguspiv/www.gtalumni.la/commit/72045f5ea8ab97a99010b2a5adecc1b857a288b8))
+* **events:** fixes calendar events without locations ([716c8d3](https://github.com/anguspiv/www.gtalumni.la/commit/716c8d3836f4303657f9d1142343e9a2c2c20389))
+
+
+### Features
+
+* adds september game watching events ([ee73053](https://github.com/anguspiv/www.gtalumni.la/commit/ee730537796f9131fdf11bf8113df5ee332e5bac))
+* **event-card:** adds all day events ([a385bfa](https://github.com/anguspiv/www.gtalumni.la/commit/a385bfa5e7b1adf2d2ff107c6f650eb5c5d7488a))
+* **event-page:** adds ability to display all day events ([a18e8e8](https://github.com/anguspiv/www.gtalumni.la/commit/a18e8e84a5440215acfbd670f2ceb98c3f543ce0))
+* **events:** allows events without locations ([512d486](https://github.com/anguspiv/www.gtalumni.la/commit/512d4869ae93e5cb1d48210f0b9857139007c987))
+
 # [1.30.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.29.0...v1.30.0) (2023-08-25)
 
 
