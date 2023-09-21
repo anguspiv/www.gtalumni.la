@@ -1,20 +1,20 @@
 ---
 title: Football Game Watching - Wake Forest
-startDate: 'September 23, 2023'
-endDate: 'September 23, 2023'
+startDate: 'September 23, 2023 3:00 PM PDT'
+endDate: 'September 23, 2023 6:30 PM PDT'
 description: ''
 image: /img/events/default-football.jpg
 link:
   label:
   href:
-# location:
-#   name: The Garage on Motor
-#   href: https://www.thegarageonmotor.com/
-#   address:
-#     street: '3387 Motor Ave'
-#     city: 'Los Angeles'
-#     state: 'CA'
-#     zip: '90034'
+location:
+   name: The Garage on Motor
+   href: https://www.thegarageonmotor.com/
+   address:
+     street: '3387 Motor Ave'
+     city: 'Los Angeles'
+     state: 'CA'
+     zip: '90034'
 ---
 
 Join us and watch the Georgia Tech Yellow Jackets take on Wake Forest Demon
