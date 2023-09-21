@@ -9,7 +9,12 @@ const Title = styled.h2`
   margin-top: 0;
 `;
 
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+  & + & {
+    margin-top: 4rem;
+  }
+`;
+
 const NoResults = styled.p`
   text-align: center;
   font-size: 1.5rem;
