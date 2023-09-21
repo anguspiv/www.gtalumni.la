@@ -18,19 +18,21 @@ export default function EventYear({ events, year }) {
     const currDate = new Date(startDate);
 
     const month = formatInTimeZone(currDate, 'America/Los_Angeles', 'MM');
+    const monthNum = currDate.getMonth();
     const monthName = formatInTimeZone(currDate, 'America/Los_Angeles', 'MMMM');
 
-    if (!acc[month]) {
-      acc[month] = {
+    if (!acc[monthNum]) {
+      acc[monthNum] = {
         title: monthName,
+        month,
         events: [],
       };
     }
 
-    acc[month].events.push(event);
+    acc[monthNum].events.push(event);
 
     return acc;
-  }, {});
+  }, []);
 
   return (
     <>
@@ -39,18 +41,14 @@ export default function EventYear({ events, year }) {
         <PageHeader title={title} location={router} labels={{ [year]: year }} />
       </Section>
       <Section maxWidth={800}>
-        {Object.entries(sortedEvents).map(([month, monthData]) => {
-          const { title: monthTitle, events: evts } = monthData;
-
-          return (
-            <EventList
-              key={month}
-              events={evts}
-              title={monthTitle}
-              href={`/events/${year}/${month}`}
-            />
-          );
-        })}
+        {sortedEvents.map(({ title: monthTitle, events: evts, month }) => (
+          <EventList
+            key={month}
+            events={evts}
+            title={monthTitle}
+            href={`/events/${year}/${month}`}
+          />
+        ))}
       </Section>
     </>
   );
