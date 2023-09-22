@@ -25,16 +25,10 @@ Home.defaultProps = {
 export default Home;
 
 export async function getStaticProps() {
-  let events = getFutureEvents([
-    'title',
-    'startDate',
-    'endDate',
-    'location',
-    'slug',
-    'content',
-    'image',
-    'description',
-  ]);
+  let events = getFutureEvents(
+    ['title', 'startDate', 'endDate', 'location', 'slug', 'content', 'image', 'description'],
+    2,
+  );
 
   events = sort(events, ({ startDate }) => new Date(startDate), 'desc');
 

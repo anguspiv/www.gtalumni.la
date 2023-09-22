@@ -137,16 +137,20 @@ export const getEventsByYear = (params, fields = []) => {
   return events;
 };
 
-export const getFutureEvents = (fields = []) => {
+export const getFutureEvents = (fields = [], limit = 0) => {
   const events = getAllEvents(fields);
 
   const startDate = startOfToday();
 
-  const futureEvents = sortEvents(
+  let futureEvents = sortEvents(
     filterEventsByDate(events, {
       startDate,
     }),
   );
+
+  if (limit > 0) {
+    futureEvents = futureEvents.slice(0, limit);
+  }
 
   return futureEvents;
 };
