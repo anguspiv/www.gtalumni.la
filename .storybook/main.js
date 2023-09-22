@@ -51,6 +51,7 @@ module.exports = {
         alias: {
           ...config.resolve.alias,
           '@components': toPath('src/components'),
+          '@constants': toPath('src/constants'),
           '@styles': toPath('src/styles'),
           '@utils': toPath('src/utils'),
           '@pages': toPath('src/pages'),
