@@ -1,6 +1,7 @@
 import { css } from '@emotion/react';
 import { Section } from '@components/atoms/Section';
 import { Typography } from '@components/atoms/Typography';
+import { DISCORD_INVITE_LINK, FACEBOOK_GROUP_LINK } from '@constants/social';
 
 export function AboutSection() {
   return (
@@ -15,15 +16,19 @@ export function AboutSection() {
         Due to how large the Los Angeles area is and the diversity of our GT community, we
         don&apos;t traditionally have assigned officers or set events. Instead, we rely on our
         members to help organize events and activities that they are interested in. We also have a{' '}
-        <a href="https://www.facebook.com/groups/39515948772/">Facebook group</a> that is used to
-        help coordinate events and activities.
+        <a href={FACEBOOK_GROUP_LINK}>Facebook group</a> that is used to help coordinate events and
+        activities.
+      </Typography>
+      <Typography variant="body1">
+        Additionally, we have a <a href={DISCORD_INVITE_LINK}>Discord Server</a> that we use to
+        communicate with each other, for those who prefer that platform.
       </Typography>
       <Typography>
         As the group grows and changes, we will update this page to reflect those changes. If you
         have any questions, please feel free to reach out in our{' '}
-        <a href="https://www.facebook.com/groups/39515948772/">Facebook group</a> for now. We will
-        be adding more channels of communication in the future to help us better coordinate and
-        communicate with our members.
+        <a href={FACEBOOK_GROUP_LINK}>Facebook group</a> or
+        <a href={DISCORD_INVITE_LINK}>Discord Server</a> for now. We will be adding more channels of
+        communication in the future to help us better coordinate and communicate with our members.
       </Typography>
       <Typography variant="body1">Go Jackets!</Typography>
       <Typography
