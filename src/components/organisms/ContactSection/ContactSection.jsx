@@ -1,9 +1,10 @@
 import styled from '@emotion/styled';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
-import { faFacebook, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faGithub, faDiscord } from '@fortawesome/free-brands-svg-icons';
 import { Section } from '@components/atoms/Section';
 import { Typography } from '@components/atoms/Typography';
+import { DISCORD_INVITE_LINK, FACEBOOK_GROUP_LINK } from '@constants/social';
 
 const ContactList = styled.ul`
   list-style: none;
@@ -53,13 +54,15 @@ export function ContactSection() {
       <div>
         <ContactList>
           <ContactItem>
-            <ContactLink
-              href="https://www.facebook.com/groups/39515948772/"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <ContactLink href={FACEBOOK_GROUP_LINK} target="_blank" rel="noreferrer">
               <ContactIcon icon={faFacebook} />
               Facebook Group
+            </ContactLink>
+          </ContactItem>
+          <ContactItem>
+            <ContactLink href={DISCORD_INVITE_LINK} target="_blank" rel="noreferrer">
+              <ContactIcon icon={faDiscord} />
+              Discord Server
             </ContactLink>
           </ContactItem>
           <ContactItem>
