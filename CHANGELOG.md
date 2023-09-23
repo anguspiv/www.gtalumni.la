@@ -1,3 +1,19 @@
+# [1.32.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.31.0...v1.32.0) (2023-09-23)
+
+
+### Bug Fixes
+
+* **event-list:** adds additional margin between event lists ([69887a5](https://github.com/anguspiv/www.gtalumni.la/commit/69887a511e2a1274f99e19bcdeb368e836465985))
+* **events-year:** corrects ordering of events ([7496248](https://github.com/anguspiv/www.gtalumni.la/commit/7496248e13fb45ba0a16ae51b0a0774d4ecd66b6))
+
+
+### Features
+
+* **about-section:** adds discord server links ([1ffee7d](https://github.com/anguspiv/www.gtalumni.la/commit/1ffee7d1daf4c1ce7430ddaa66f099bc82701653)), closes [#225](https://github.com/anguspiv/www.gtalumni.la/issues/225)
+* **contact-section:** adds the discord server invite link ([126ef8e](https://github.com/anguspiv/www.gtalumni.la/commit/126ef8ea1113e3268c0d1cfa996d73deb769f6bc)), closes [#225](https://github.com/anguspiv/www.gtalumni.la/issues/225)
+* **events:** updates and adds game watchings for the year ([b576311](https://github.com/anguspiv/www.gtalumni.la/commit/b576311138847afa7265f0113dca3ecb51cd6cd7))
+* **index:** limits number of future events to 2 ([46c4976](https://github.com/anguspiv/www.gtalumni.la/commit/46c49760f8e3b7c6566068553ff1d9337161eb13)), closes [#225](https://github.com/anguspiv/www.gtalumni.la/issues/225)
+
 # [1.31.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.30.0...v1.31.0) (2023-09-08)
 
 
