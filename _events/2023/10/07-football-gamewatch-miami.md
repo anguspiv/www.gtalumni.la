@@ -1,20 +1,20 @@
 ---
 title: Football Game Watching - Miami 
-startDate: 'October 7, 2023'
-endDate: 'October 7, 2023'
+startDate: 'October 7, 2023 4:30 PM PDT'
+endDate: 'October 7, 2023 8:00 PM PDT'
 description: ''
 image: /img/events/default-football.jpg
 link:
   label:
   href:
-# location:
-#   name: The Garage on Motor
-#   href: https://www.thegarageonmotor.com/
-#   address:
-#     street: '3387 Motor Ave'
-#     city: 'Los Angeles'
-#     state: 'CA'
-#     zip: '90034'
+location:
+  name: The Garage on Motor
+  href: https://www.thegarageonmotor.com/
+  address:
+    street: '3387 Motor Ave'
+    city: 'Los Angeles'
+    state: 'CA'
+    zip: '90034'
 ---
 
 Join us and watch the Georgia Tech Yellow Jackets take on the Miami Hurricanes.
