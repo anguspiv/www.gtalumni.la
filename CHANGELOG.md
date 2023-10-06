@@ -1,3 +1,10 @@
+# [1.33.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.32.0...v1.33.0) (2023-10-06)
+
+
+### Features
+
+* adds location to miami game ([544dee2](https://github.com/anguspiv/www.gtalumni.la/commit/544dee2a5c29042c1dac2afff07721412bebed22))
+
 # [1.32.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.31.0...v1.32.0) (2023-09-23)
 
 
