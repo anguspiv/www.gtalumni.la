@@ -1,3 +1,10 @@
+# [1.34.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.33.0...v1.34.0) (2024-01-11)
+
+
+### Features
+
+* **events:** adds the january happy hour ([9b38191](https://github.com/anguspiv/www.gtalumni.la/commit/9b38191234e9ba3bce1ea737b6cecb63d6a8ce56))
+
 # [1.33.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.32.0...v1.33.0) (2023-10-06)
 
 
