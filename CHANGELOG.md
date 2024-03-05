@@ -1,3 +1,15 @@
+# [1.35.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.34.0...v1.35.0) (2024-03-05)
+
+
+### Bug Fixes
+
+* **upcoming:** increases the limit to 3 months ([b0c4e69](https://github.com/anguspiv/www.gtalumni.la/commit/b0c4e697d416e87053e4855716dc0272bde28461))
+
+
+### Features
+
+* adds the ramble the night event 2024 ([00acb74](https://github.com/anguspiv/www.gtalumni.la/commit/00acb74bc49c6fdf333cb1eabf1f23b302caa1cc))
+
 # [1.34.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.33.0...v1.34.0) (2024-01-11)
 
 
