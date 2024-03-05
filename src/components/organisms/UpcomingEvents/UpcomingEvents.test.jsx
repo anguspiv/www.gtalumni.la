@@ -13,10 +13,12 @@ describe('<UpcomingEvents />', () => {
       image: 'https://via.placeholder.com/300',
       location: {
         name: 'Test Location',
-        address: '123 Test St.',
-        city: 'Test City',
-        state: 'Test State',
-        zip: '12345',
+        address: {
+          street: '123 Test St.',
+          city: 'Test City',
+          state: 'Test State',
+          zip: '12345',
+        },
       },
       slug: 'test-event',
     },
@@ -28,10 +30,12 @@ describe('<UpcomingEvents />', () => {
       image: 'https://via.placeholder.com/300',
       location: {
         name: 'Test Location 2',
-        address: '123 Test St.',
-        city: 'Test City',
-        state: 'Test State',
-        zip: '12345',
+        address: {
+          street: '123 Test St.',
+          city: 'Test City',
+          state: 'Test State',
+          zip: '12345',
+        },
       },
       slug: 'test-event-2',
     },
@@ -43,10 +47,12 @@ describe('<UpcomingEvents />', () => {
       image: 'https://via.placeholder.com/300',
       location: {
         name: 'Test Location 3',
-        address: '123 Test St.',
-        city: 'Test City',
-        state: 'Test State',
-        zip: '12345',
+        address: {
+          street: '123 Test St.',
+          city: 'Test City',
+          state: 'Test State',
+          zip: '12345',
+        },
       },
       slug: 'test-event-3',
     },
@@ -59,10 +65,12 @@ describe('<UpcomingEvents />', () => {
       location: {
         name: 'Test Location 4',
 
-        address: '123 Test St.',
-        city: 'Test City',
-        state: 'Test State',
-        zip: '12345',
+        address: {
+          street: '123 Test St.',
+          city: 'Test City',
+          state: 'Test State',
+          zip: '12345',
+        },
       },
       slug: 'test-event-4',
     },
@@ -74,10 +82,12 @@ describe('<UpcomingEvents />', () => {
       image: 'https://via.placeholder.com/300',
       location: {
         name: 'Test Location 5',
-        address: '123 Test St.',
-        city: 'Test City',
-        state: 'Test State',
-        zip: '12345',
+        address: {
+          street: '123 Test St.',
+          city: 'Test City',
+          state: 'Test State',
+          zip: '12345',
+        },
       },
       slug: 'test-event-5',
     },
@@ -89,10 +99,12 @@ describe('<UpcomingEvents />', () => {
       image: 'https://via.placeholder.com/300',
       location: {
         name: 'Test Location 6',
-        address: '123 Test St.',
-        city: 'Test City',
-        state: 'Test State',
-        zip: '12345',
+        address: {
+          street: '123 Test St.',
+          city: 'Test City',
+          state: 'Test State',
+          zip: '12345',
+        },
       },
       slug: 'test-event-6',
     },
@@ -106,12 +118,12 @@ describe('<UpcomingEvents />', () => {
     expect(screen.getByText('Upcoming Events')).toBeInTheDocument();
     expect(screen.getByTestId('section')).toHaveClass('test-class');
 
-    expect(screen.getAllByTestId('event-card')).toHaveLength(3);
+    expect(screen.getAllByTestId('event-card')).toHaveLength(4);
     expect(screen.queryByTestId('Test Event')).not.toBeInTheDocument();
     expect(screen.getByText('Test Event 2')).toBeInTheDocument();
     expect(screen.getByText('Test Event 3')).toBeInTheDocument();
     expect(screen.getByText('Test Event 4')).toBeInTheDocument();
-    expect(screen.queryByText('Test Event 5')).not.toBeInTheDocument();
+    expect(screen.getByText('Test Event 5')).toBeInTheDocument();
     expect(screen.queryByText('Test Event 6')).not.toBeInTheDocument();
   });
 });
