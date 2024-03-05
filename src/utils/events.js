@@ -17,7 +17,7 @@ export const filterEventsByDate = (events, { startDate, endDate }) =>
 
 export const filterUpcomingEvents = (events) => {
   const startDate = startOfToday();
-  const endDate = endOfDay(addMonths(startDate, 1));
+  const endDate = endOfDay(addMonths(startDate, 3));
 
   return filterEventsByDate(events, { startDate, endDate });
 };

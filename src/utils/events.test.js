@@ -145,10 +145,10 @@ describe('filterUpcomingEvents', () => {
 
     const upcomingEvents = filterUpcomingEvents(events);
 
-    expect(upcomingEvents).toHaveLength(3);
-    expect(upcomingEvents[0].title).toBe('Test Event 2');
-    expect(upcomingEvents[1].title).toBe('Test Event 4');
-    expect(upcomingEvents[2].title).toBe('Test Event 3');
+    expect(upcomingEvents).toHaveLength(4);
+    expect(upcomingEvents[0].title).toBe('Test Event 5');
+    expect(upcomingEvents[1].title).toBe('Test Event 2');
+    expect(upcomingEvents[2].title).toBe('Test Event 4');
   });
 });
 
