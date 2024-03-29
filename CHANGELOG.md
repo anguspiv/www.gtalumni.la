@@ -1,3 +1,10 @@
+# [1.36.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.35.0...v1.36.0) (2024-03-29)
+
+
+### Features
+
+* **ramble-the-night:** add final details for the _events ([973d2f1](https://github.com/anguspiv/www.gtalumni.la/commit/973d2f15e985e93c2ceb1cb0bbb18f595e193471))
+
 # [1.35.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.34.0...v1.35.0) (2024-03-05)
 
 
