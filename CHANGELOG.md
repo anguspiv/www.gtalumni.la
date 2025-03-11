@@ -1,3 +1,10 @@
+# [1.37.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.36.0...v1.37.0) (2025-03-11)
+
+
+### Features
+
+* **events:** adds ramble the night 2025 ([c946fb5](https://github.com/anguspiv/www.gtalumni.la/commit/c946fb5725bb93c0a4dba4728877427d4817c8fc)), closes [#252](https://github.com/anguspiv/www.gtalumni.la/issues/252)
+
 # [1.36.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.35.0...v1.36.0) (2024-03-29)
 
 
