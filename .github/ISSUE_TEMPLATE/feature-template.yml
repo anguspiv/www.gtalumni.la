@@ -1,0 +1,61 @@
+name: Feature Request
+description: Suggest a new feature for the site
+title: "[Feature]: "
+labels:
+  - feat
+  - needs-review
+assignees:
+  - anguspiv
+projects:
+  - anguspiv/11
+  - anguspiv/5
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a new feature! Please provide the details below.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Quick Description
+      description: A clear and concise description of what you want to happen
+      placeholder: As a user, I want to be able to...
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: Detailed Description
+      description: Provide any additional details, context, or examples
+      placeholder: |
+        - What problem does this solve?
+        - How would this feature work?
+        - Any alternatives you've considered?
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      description: What needs to be true for this feature to be considered complete?
+      placeholder: |
+        - [ ] Should be able to...
+        - [ ] Should handle...
+        - [ ] Should validate...
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Add any other context, screenshots, or references
+      placeholder: |
+        - Similar features in other sites...
+        - Mockups or wireframes...
+        - Related documentation...
+    validations:
+      required: false

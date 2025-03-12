@@ -1,0 +1,133 @@
+name: New Event
+description: Submit a new event to be added to the site
+title: "[Event]: "
+labels:
+  - event
+  - needs-review
+assignees:
+  - anguspiv
+projects:
+  - anguspiv/11
+  - anguspiv/5
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for submitting a new event! Please fill out the details below.
+
+  - type: input
+    id: title
+    attributes:
+      label: Event Title
+      description: The name of the event
+      placeholder: "Example: Ramble the Night"
+    validations:
+      required: true
+
+  - type: input
+    id: start-date
+    attributes:
+      label: Start Date and Time
+      description: When does the event start?
+      placeholder: "Example: April 24, 2025 6:00 PM PDT"
+    validations:
+      required: true
+
+  - type: input
+    id: end-date
+    attributes:
+      label: End Date and Time
+      description: When does the event end? (Optional)
+      placeholder: "Example: April 24, 2025 8:00 PM PDT"
+    validations:
+      required: false
+
+  - type: input
+    id: link-label
+    attributes:
+      label: Link Label
+      description: The text to display for the event link (Optional)
+      placeholder: "Example: Register"
+    validations:
+      required: false
+
+  - type: input
+    id: link-url
+    attributes:
+      label: Link URL
+      description: The URL for the event link (Optional)
+      placeholder: "https://..."
+    validations:
+      required: false
+
+  - type: input
+    id: location-name
+    attributes:
+      label: Location Name
+      description: The name of the venue
+      placeholder: "Example: Arts District Brewing Company"
+    validations:
+      required: true
+
+  - type: input
+    id: location-url
+    attributes:
+      label: Location URL
+      description: The website for the venue (Optional)
+      placeholder: "https://..."
+    validations:
+      required: false
+
+  - type: input
+    id: address-street
+    attributes:
+      label: Street Address
+      description: The street address of the venue
+      placeholder: "Example: 828 Traction Ave"
+    validations:
+      required: true
+
+  - type: input
+    id: address-city
+    attributes:
+      label: City
+      description: The city where the venue is located
+      placeholder: "Example: Los Angeles"
+    validations:
+      required: true
+
+  - type: input
+    id: address-state
+    attributes:
+      label: State
+      description: The state where the venue is located
+      placeholder: "Example: CA"
+    validations:
+      required: true
+
+  - type: input
+    id: address-zip
+    attributes:
+      label: ZIP Code
+      description: The ZIP code of the venue
+      placeholder: "Example: 90013"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Event Description
+      description: A detailed description of the event
+      placeholder: "Describe what attendees can expect at the event..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: image
+    attributes:
+      label: Event Image
+      description: Upload or describe the image to be used for the event
+      placeholder: "You can drag and drop an image here, or describe what image should be used..."
+    validations:
+      required: false
