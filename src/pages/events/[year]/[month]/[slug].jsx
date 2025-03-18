@@ -36,18 +36,22 @@ export default function Event({ event, month }) {
   const { title, content, startDate, description, image, location, endDate, link } = event;
 
   const parsedStartDate = new Date(startDate);
-  const parsedEndDate = new Date(endDate);
+  const parsedEndDate = endDate ? new Date(endDate) : null;
 
   const formattedMonth = formatInTimeZone(parsedStartDate, 'America/Los_Angeles', 'MMMM');
 
   const calStartDate = formatInTimeZone(parsedStartDate, 'America/Los_Angeles', 'yyyy-MM-dd');
-  const calEndDate = formatInTimeZone(parsedEndDate, 'America/Los_Angeles', 'yyyy-MM-dd');
+  const calEndDate = parsedEndDate
+    ? formatInTimeZone(parsedEndDate, 'America/Los_Angeles', 'yyyy-MM-dd')
+    : null;
   let calStartTime = formatInTimeZone(parsedStartDate, 'America/Los_Angeles', 'HH:mm');
-  let calEndTime = formatInTimeZone(parsedEndDate, 'America/Los_Angeles', 'HH:mm');
+  let calEndTime = parsedEndDate
+    ? formatInTimeZone(parsedEndDate, 'America/Los_Angeles', 'HH:mm')
+    : null;
 
   let dateFormat = 'MMMM d, yyyy @ h:mm a';
 
-  if (calStartTime === calEndTime) {
+  if (!calEndTime || calStartTime === calEndTime) {
     dateFormat = 'MMMM d, yyyy';
     calStartTime = null;
     calEndTime = null;
