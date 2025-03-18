@@ -1,3 +1,10 @@
+## [1.37.1](https://github.com/anguspiv/www.gtalumni.la/compare/v1.37.0...v1.37.1) (2025-03-18)
+
+
+### Bug Fixes
+
+* **events:** handle empty end dates in event display ([42242af](https://github.com/anguspiv/www.gtalumni.la/commit/42242af394f5eaece27628e7edbaa85887f424c7)), closes [#256](https://github.com/anguspiv/www.gtalumni.la/issues/256)
+
 # [1.37.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.36.0...v1.37.0) (2025-03-11)
 
 
