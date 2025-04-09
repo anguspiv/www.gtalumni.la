@@ -1,3 +1,10 @@
+# [1.38.0](https://github.com/anguspiv/www.gtalumni.la/compare/v1.37.1...v1.38.0) (2025-04-09)
+
+
+### Features
+
+* **ramble-the-night:** adds the registration link and updates the event details ([#261](https://github.com/anguspiv/www.gtalumni.la/issues/261)) ([1481cb9](https://github.com/anguspiv/www.gtalumni.la/commit/1481cb90c13298dbbd4109d3d9d7c1b63c87de7b)), closes [#258](https://github.com/anguspiv/www.gtalumni.la/issues/258)
+
 ## [1.37.1](https://github.com/anguspiv/www.gtalumni.la/compare/v1.37.0...v1.37.1) (2025-03-18)
 
 
